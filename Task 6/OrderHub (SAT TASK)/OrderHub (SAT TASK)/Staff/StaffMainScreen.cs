@@ -118,6 +118,73 @@ namespace OrderHub__SAT_Task_
             form1.Show();
         }
 
+
+        private void AddItemToListViewAndLogFile(string itemName, string price, string quantity)
+        {
+            // Generate the ID
+            int newId = 1;
+            if (File.Exists(logFilePath))
+            {
+                string[] lines = File.ReadAllLines(logFilePath);
+
+                // If there are existing records, calculate the new ID based on the last record
+                if (lines.Length > 0)
+                {
+                    string[] item = lines[lines.Length - 1].Split(",");
+                    newId = int.Parse(item[0]) + 1;
+                }
+            }
+
+            // Construct the record
+            string id = newId.ToString();
+            string record = $"{id}";
+
+            // Write the record to the log file
+            using (TextWriter tw = new StreamWriter(logFilePath, true))
+            {
+                tw.WriteLine(record);
+            }
+
+            // Create a new ListView item and add it to the ListView
+            ListViewItem listItem = new ListViewItem();
+            listItem.Text = id;
+            listItem.SubItems.Add(itemName);
+            listItem.SubItems.Add(price);
+            listItem.SubItems.Add(quantity);
+
+            lsvOutput.Items.Insert(0, listItem);
+        }
+
+
+        private double CalculateTotalCost()
+        {
+            double totalCost = 0.0;
+
+            foreach (ListViewItem item in lsvOutput.Items)
+            {
+                // Assuming the price is stored in the third column (index 2)
+                string priceText = item.SubItems[2].Text.Replace("$", "");
+                if (double.TryParse(priceText, out double price))
+                {
+                    totalCost += price;
+                }
+            }
+
+            return totalCost;
+        }
+
+        private void ProcessPayment(double amountPaid)
+        {
+            double totalCost = CalculateTotalCost();
+            double change = amountPaid - totalCost;
+
+            MessageBox.Show($"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}");
+
+            SaveOrdersToXml();
+            lsvOutput.Items.Clear();
+        }
+
+
         private void lsvOutput_SelectedIndexChanged(object sender, EventArgs e)
         {
             string id = clhID.Text;
@@ -136,62 +203,62 @@ namespace OrderHub__SAT_Task_
 
         private void btn1Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[1].Text = numbervalue = "1";
+            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "1";
         }
 
         private void btn2Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[1].Text = numbervalue = "2";
+            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "2";
         }
 
         private void btn3Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[1].Text = numbervalue = "3";
+            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "3";
         }
 
         private void btn4Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[1].Text = numbervalue = "4";
+            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "4";
         }
 
         private void btn5Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[1].Text = numbervalue = "5";
+            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "5";
         }
 
         private void btn6Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[1].Text = numbervalue = "6";
+            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "6";
         }
 
         private void btn7Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[1].Text = numbervalue = "7";
+            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "7";
         }
 
         private void btn8Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[1].Text = numbervalue = "8";
+            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "8";
         }
 
         private void btn9Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[1].Text = numbervalue = "9";
+            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "9";
         }
 
         private void btn0Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[1].Text = numbervalue + "0";
+            lsvOutput.Items[0].SubItems[3].Text = numbervalue + "0";
         }
 
         private void btn00Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[1].Text = numbervalue + "00";
+            lsvOutput.Items[0].SubItems[3].Text = numbervalue + "00";
         }
 
         private void btnDecimalpointNumberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[1].Text = numbervalue + ".";
+            lsvOutput.Items[0].SubItems[3].Text = numbervalue + ".";
         }
 
         private void btnDeleteNumerpad_Click(object sender, EventArgs e)
@@ -214,959 +281,165 @@ namespace OrderHub__SAT_Task_
 
         private void btnCheeseBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Cheese Burger");
-            Item.SubItems.Add("$5");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Cheese Burger", "$5", "1");
         }
 
         private void btnDoubleCheeseBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Double Cheese Burger");
-            Item.SubItems.Add("$12");
-            Item.SubItems.Add("1");
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Double Cheese Burger", "$15", "1");
         }
 
         private void btnThreeCheeseBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Three Cheese Burger");
-            Item.SubItems.Add("$16");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Three Cheese Burger", "$18", "1");
         }
 
         private void EightCheeseBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Eight Cheese Burger");
-            Item.SubItems.Add("$18");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Eight Cheese Burger", "$20", "1");
         }
 
         private void btnAngusBeefBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Angus Beef Burger");
-            Item.SubItems.Add("$15");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Angus Beef Burger", "$10", "1");
         }
 
         private void btnHamBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Ham Burger");
-            Item.SubItems.Add("$7");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Ham Burger", "$8", "1");
         }
 
         private void btnMushroomBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Mushroom Burger");
-            Item.SubItems.Add("$5");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Mushroom Burger", "$7", "1");
         }
 
         private void btnBaconCheeseBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Bacon Cheese Burger");
-            Item.SubItems.Add("$10");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
-        }
-
-        private void btnWaguBurger_Click(object sender, EventArgs e)
-        {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Wagu Burger");
-            Item.SubItems.Add("$50");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Bacon Cheese Burger", "$10", "1");
         }
 
         private void btnTurkeyBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Turkey Burger");
-            Item.SubItems.Add("$10");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Turkey Burger", "$12", "1");
         }
 
         private void btnChickenBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Chicken Burger");
-            Item.SubItems.Add("$8");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Chicken Burger", "$13", "1");
         }
 
         private void btnChiliBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Chili Burger");
-            Item.SubItems.Add("$5");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Chili Burger", "$5", "1");
         }
 
         private void btnLambBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Lamb Burger");
-            Item.SubItems.Add("$7");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Lamb Burger", "$7", "1");
         }
 
         private void btnBBQBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("BBQ Burger");
-            Item.SubItems.Add("$5");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("BBQ Burger", "$5", "1");
         }
 
         private void btnElkBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Elk Burger");
-            Item.SubItems.Add("$20");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Elk Burger", "$13", "1");
         }
 
         private void btnOnionBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Onion Burger");
-            Item.SubItems.Add("$7");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Onion Burger", "$9", "1");
         }
 
         private void btnSalmonBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Salmon Burger");
-            Item.SubItems.Add("$15");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Salmon Burger", "$10", "1");
         }
 
         private void btnPizzaBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Pizza Burger");
-            Item.SubItems.Add("$12");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Pizza Burger", "$12", "1");
         }
 
         private void btnTeriyakiBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Teriyaki Burger");
-            Item.SubItems.Add("$18");
-            Item.SubItems.Add("1");
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Teriyaki Burger", "$18", "1");
         }
 
         private void btnBlackbeanBurger_Click(object sender, EventArgs e)
         {
-            // Generate the ID
-            int NewId = 1;
-            if (File.Exists(logFilePath))
-            {
-                String[] Lines = File.ReadAllLines(logFilePath);
-
-                // If there are existing records, calculate the new ID based on the last record
-                if (Lines.Length > 0)
-                {
-                    string[] item = Lines[Lines.Length - 1].Split(",");
-                    NewId = int.Parse(item[0]) + 1;
-                }
-            }
-
-
-            // Construct the record
-            string ID = NewId.ToString();
-            string Record = $"{ID}";
-
-
-            // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
-            {
-                tw.WriteLine(Record);
-            }
-
-
-            ListViewItem Item = new ListViewItem();
-            Item.Text = NewId.ToString();
-            Item.SubItems.Add("Black Bean Burger");
-            Item.SubItems.Add("$5");
-            Item.SubItems.Add("1");
-
-
-            lsvOutput.Items.Insert(0, Item);
+            AddItemToListViewAndLogFile("Black Bean Burger", "$5", "1");
         }
 
         private void btn5DollarNote_Click(object sender, EventArgs e)
         {
-            if (lsvOutput.Items.Count > 0)
-            {
-                decimal totalCost = 0m;
+            // Calculate the total cost
+            double totalCost = CalculateTotalCost();
+            double amountPaid = 50;
+            double change = amountPaid - totalCost;
 
-                // Sum up the prices from all items
-                foreach (ListViewItem item in lsvOutput.Items)
-                {
-                    string priceText = item.SubItems[2].Text; // Adjusted to correct the price column index if it's 2
-                    if (decimal.TryParse(priceText.TrimStart('$'), out decimal price))
-                    {
-                        totalCost += price;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid price format in one or more items");
-                        return;
-                    }
-                }
+            MessageBox.Show($"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}");
 
-                decimal payment = 5.00m;
-                if (totalCost <= payment)
-                {
-                    // Calculate change
-                    decimal change = payment - totalCost;
-                    txtChange.Text = $"Change: ${change:F2}";
-
-                    // Show message if change is zero
-                    if (change == 0)
-                    {
-                        MessageBox.Show("That is enough");
-                    }
-
-                    // Save orders from ListView to XML file
-                    SaveOrdersToXml();
-                    lsvOutput.Items.Clear();
-                    txtChange.Text = string.Empty;
-                }
-                else
-                {
-                    MessageBox.Show("Insufficient funds");
-                }
-            }
-            else
-            {
-                MessageBox.Show("No items in the list");
-            }
+            // Save orders from ListView to XML file
+            SaveOrdersToXml();
+            lsvOutput.Items.Clear();
         }
 
         private void btn10DollarNote_Click(object sender, EventArgs e)
         {
-            if (lsvOutput.Items.Count > 0)
-            {
-                decimal totalCost = 0m;
+            // Calculate the total cost
+            double totalCost = CalculateTotalCost();
+            double amountPaid = 10;
+            double change = amountPaid - totalCost;
 
-                // Sum up the prices from all items
-                foreach (ListViewItem item in lsvOutput.Items)
-                {
-                    string priceText = item.SubItems[2].Text; // Adjusted to correct the price column index if it's 2
-                    if (decimal.TryParse(priceText.TrimStart('$'), out decimal price))
-                    {
-                        totalCost += price;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid price format in one or more items");
-                        return;
-                    }
-                }
+            MessageBox.Show($"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}");
 
-                decimal payment = 10.00m;
-                if (totalCost <= payment)
-                {
-                    // Calculate change
-                    decimal change = payment - totalCost;
-                    txtChange.Text = $"Change: ${change:F2}";
-
-                    // Show message if change is zero
-                    if (change == 0)
-                    {
-                        MessageBox.Show("That is enough");
-                    }
-
-                    // Save orders from ListView to XML file
-                    SaveOrdersToXml();
-                    lsvOutput.Items.Clear();
-                    txtChange.Text = string.Empty;
-                }
-                else
-                {
-                    MessageBox.Show("Insufficient funds");
-                }
-            }
-            else
-            {
-                MessageBox.Show("No items in the list");
-            }
+            // Save orders from ListView to XML file
+            SaveOrdersToXml();
+            lsvOutput.Items.Clear();
         }
 
         private void btn20DollarNote_Click(object sender, EventArgs e)
         {
-            if (lsvOutput.Items.Count > 0)
-            {
-                decimal totalCost = 0m;
+            // Calculate the total cost
+            double totalCost = CalculateTotalCost();
+            double amountPaid = 20;
+            double change = amountPaid - totalCost;
 
-                // Sum up the prices from all items
-                foreach (ListViewItem item in lsvOutput.Items)
-                {
-                    string priceText = item.SubItems[2].Text; // Adjusted to correct the price column index if it's 2
-                    if (decimal.TryParse(priceText.TrimStart('$'), out decimal price))
-                    {
-                        totalCost += price;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid price format in one or more items");
-                        return;
-                    }
-                }
+            MessageBox.Show($"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}");
 
-                decimal payment = 20.00m;
-                if (totalCost <= payment)
-                {
-                    // Calculate change
-                    decimal change = payment - totalCost;
-                    txtChange.Text = $"Change: ${change:F2}";
-
-                    // Show message if change is zero
-                    if (change == 0)
-                    {
-                        MessageBox.Show("That is enough");
-                    }
-
-                    // Save orders from ListView to XML file
-                    SaveOrdersToXml();
-                    lsvOutput.Items.Clear();
-                    txtChange.Text = string.Empty;
-                }
-                else
-                {
-                    MessageBox.Show("Insufficient funds");
-                }
-            }
-            else
-            {
-                MessageBox.Show("No items in the list");
-            }
+            // Save orders from ListView to XML file
+            SaveOrdersToXml();
+            lsvOutput.Items.Clear();
         }
 
         private void btn50DollarNote_Click(object sender, EventArgs e)
         {
-            if (lsvOutput.Items.Count > 0)
-            {
-                decimal totalCost = 0m;
+            // Calculate the total cost
+            double totalCost = CalculateTotalCost();
+            double amountPaid = 50;
+            double change = amountPaid - totalCost;
 
-                // Sum up the prices from all items
-                foreach (ListViewItem item in lsvOutput.Items)
-                {
-                    string priceText = item.SubItems[2].Text; // Adjusted to correct the price column index if it's 2
-                    if (decimal.TryParse(priceText.TrimStart('$'), out decimal price))
-                    {
-                        totalCost += price;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid price format in one or more items");
-                        return;
-                    }
-                }
+            MessageBox.Show($"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}");
 
-                decimal payment = 50.00m;
-                if (totalCost <= payment)
-                {
-                    // Calculate change
-                    decimal change = payment - totalCost;
-                    txtChange.Text = $"Change: ${change:F2}";
+            // Save orders from ListView to XML file
+            SaveOrdersToXml();
+            lsvOutput.Items.Clear();
+        }
 
-                    // Show message if change is zero
-                    if (change == 0)
-                    {
-                        MessageBox.Show("That is enough");
-                    }
+        private void btnWaguBurger_Click(object sender, EventArgs e)
+        {
+            AddItemToListViewAndLogFile("Wagu Burger", "$50", "1");
+        }
 
-                    // Save orders from ListView to XML file
-                    SaveOrdersToXml();
-                    lsvOutput.Items.Clear();
-                    txtChange.Text = string.Empty;
-                }
-                else
-                {
-                    MessageBox.Show("Insufficient funds");
-                }
-            }
-            else
-            {
-                MessageBox.Show("No items in the list");
-            }
+        private void btnSalePayment_Click(object sender, EventArgs e)
+        {
+            SaveOrdersToXml();
+            lsvOutput.Items.Clear();
+
         }
     }
 }

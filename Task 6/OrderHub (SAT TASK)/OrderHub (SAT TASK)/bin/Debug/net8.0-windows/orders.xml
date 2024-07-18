@@ -1,21 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Orders>
   <Order>
-    <ID>7</ID>
-    <Details>Three Cheese Burger</Details>
-    <Price>$16</Price>
-    <Quantity>1</Quantity>
-  </Order>
-  <Order>
-    <ID>6</ID>
-    <Details>Double Cheese Burger</Details>
-    <Price>$12</Price>
-    <Quantity>1</Quantity>
-  </Order>
-  <Order>
-    <ID>5</ID>
-    <Details>Ham Burger</Details>
-    <Price>$7</Price>
-    <Quantity>1</Quantity>
+    <ID>11</ID>
+    <Details>Cheese Burger</Details>
+    <Price>$5</Price>
+    <Quantity>700</Quantity>
   </Order>
 </Orders>

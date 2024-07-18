@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OrderHub (SAT Task)")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fae00b64800f68668c8c5b0be96ad681845761c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("OrderHub (SAT Task)")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OrderHub (SAT Task)")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
