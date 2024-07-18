@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<profile>
+  <users>
+    <username>1</username>
+    <pwd>1</pwd>
+	<Chefuser>2</Chefuser>
+	<ChefPwd>2</ChefPwd>
+  </users>
+</profile>  

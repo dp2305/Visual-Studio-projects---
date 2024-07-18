@@ -1,0 +1,18 @@
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\bin\Debug\net8.0-windows\OrderHub (SAT Task).exe
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\bin\Debug\net8.0-windows\OrderHub (SAT Task).deps.json
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\bin\Debug\net8.0-windows\OrderHub (SAT Task).runtimeconfig.json
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\bin\Debug\net8.0-windows\OrderHub (SAT Task).dll
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\bin\Debug\net8.0-windows\OrderHub (SAT Task).pdb
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub__SAT_Task_.LoginMain.resources
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub__SAT_Task_.Properties.Resources.resources
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub__SAT_Task_.StaffMainScreen.resources
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub (SAT Task).csproj.GenerateResource.cache
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub (SAT Task).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub (SAT Task).AssemblyInfoInputs.cache
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub (SAT Task).AssemblyInfo.cs
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub (SAT Task).csproj.CoreCompileInputs.cache
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub (SAT Task).dll
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\refint\OrderHub (SAT Task).dll
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub (SAT Task).pdb
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub (SAT Task).genruntimeconfig.cache
+C:\Users\duttp\OneDrive - Belmont High School\Year 12\Software Dev\Unit 3\SAT tasks\Task 6\OrderHub (SAT Task)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\ref\OrderHub (SAT Task).dll

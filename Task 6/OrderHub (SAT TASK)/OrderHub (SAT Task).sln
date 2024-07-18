@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderHub (SAT Task)", "OrderHub (SAT Task)\OrderHub (SAT Task).csproj", "{A3921375-1077-4444-B54B-6B44C4A9872A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3921375-1077-4444-B54B-6B44C4A9872A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3921375-1077-4444-B54B-6B44C4A9872A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3921375-1077-4444-B54B-6B44C4A9872A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3921375-1077-4444-B54B-6B44C4A9872A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C0B5841-ED55-41F5-AC50-A21ACD118F34}
+	EndGlobalSection
+EndGlobal
