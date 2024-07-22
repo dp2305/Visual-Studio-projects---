@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderHub__SAT_Task_.Staff;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -440,6 +441,21 @@ namespace OrderHub__SAT_Task_
             SaveOrdersToXml();
             lsvOutput.Items.Clear();
 
+        }
+
+        private void btnMemberLogin_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of EditDelete form.
+            MemberLogin memberlogin = new MemberLogin();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            memberlogin.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            memberlogin.Show();
         }
     }
 }

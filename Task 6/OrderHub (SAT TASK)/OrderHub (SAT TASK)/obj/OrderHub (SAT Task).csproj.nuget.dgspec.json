@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\duttp\\Source\\Repos\\Visual-Studio-projects-\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT Task)\\OrderHub (SAT Task).csproj": {}
+    "C:\\Users\\duttp\\source\\repos\\Visual-Studio-projects-\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT Task)\\OrderHub (SAT Task).csproj": {}
   },
   "projects": {
-    "C:\\Users\\duttp\\Source\\Repos\\Visual-Studio-projects-\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT Task)\\OrderHub (SAT Task).csproj": {
+    "C:\\Users\\duttp\\source\\repos\\Visual-Studio-projects-\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT Task)\\OrderHub (SAT Task).csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\duttp\\Source\\Repos\\Visual-Studio-projects-\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT Task)\\OrderHub (SAT Task).csproj",
+        "projectUniqueName": "C:\\Users\\duttp\\source\\repos\\Visual-Studio-projects-\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT Task)\\OrderHub (SAT Task).csproj",
         "projectName": "OrderHub (SAT Task)",
-        "projectPath": "C:\\Users\\duttp\\Source\\Repos\\Visual-Studio-projects-\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT Task)\\OrderHub (SAT Task).csproj",
+        "projectPath": "C:\\Users\\duttp\\source\\repos\\Visual-Studio-projects-\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT Task)\\OrderHub (SAT Task).csproj",
         "packagesPath": "C:\\Users\\duttp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\duttp\\Source\\Repos\\Visual-Studio-projects-\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT Task)\\obj\\",
+        "outputPath": "C:\\Users\\duttp\\source\\repos\\Visual-Studio-projects-\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT Task)\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

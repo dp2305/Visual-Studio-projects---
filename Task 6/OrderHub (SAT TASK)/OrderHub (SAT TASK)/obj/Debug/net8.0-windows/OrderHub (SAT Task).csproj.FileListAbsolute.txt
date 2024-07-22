@@ -35,3 +35,5 @@ C:\Users\duttp\Source\Repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\O
 C:\Users\duttp\Source\Repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub (SAT Task).pdb
 C:\Users\duttp\Source\Repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub (SAT Task).genruntimeconfig.cache
 C:\Users\duttp\Source\Repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\ref\OrderHub (SAT Task).dll
+C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub__SAT_Task_.Staff.Form1.resources
+C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub__SAT_Task_.Staff.MemberLogin.resources

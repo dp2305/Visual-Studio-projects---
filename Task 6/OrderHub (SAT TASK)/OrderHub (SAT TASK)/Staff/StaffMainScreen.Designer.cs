@@ -34,9 +34,9 @@
             btnCold = new Button();
             btnHot = new Button();
             button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
+            btnEaster = new Button();
+            btnSummerTime = new Button();
+            btnChristmas = new Button();
             btnMemberLogin = new Button();
             btnSignOut = new Button();
             txtChange = new TextBox();
@@ -153,38 +153,38 @@
             button5.Text = "Special";
             button5.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnEaster
             // 
-            button6.Font = new Font("Segoe UI", 12F);
-            button6.Location = new Point(0, 530);
-            button6.Margin = new Padding(4, 5, 4, 5);
-            button6.Name = "button6";
-            button6.Size = new Size(140, 77);
-            button6.TabIndex = 7;
-            button6.Text = "button6";
-            button6.UseVisualStyleBackColor = true;
+            btnEaster.Font = new Font("Segoe UI", 12F);
+            btnEaster.Location = new Point(0, 530);
+            btnEaster.Margin = new Padding(4, 5, 4, 5);
+            btnEaster.Name = "btnEaster";
+            btnEaster.Size = new Size(140, 77);
+            btnEaster.TabIndex = 7;
+            btnEaster.Text = "Easter";
+            btnEaster.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnSummerTime
             // 
-            button7.Font = new Font("Segoe UI", 12F);
-            button7.Location = new Point(-1, 602);
-            button7.Margin = new Padding(4, 5, 4, 5);
-            button7.Name = "button7";
-            button7.Size = new Size(143, 77);
-            button7.TabIndex = 8;
-            button7.Text = "button7";
-            button7.UseVisualStyleBackColor = true;
+            btnSummerTime.Font = new Font("Segoe UI", 12F);
+            btnSummerTime.Location = new Point(-1, 602);
+            btnSummerTime.Margin = new Padding(4, 5, 4, 5);
+            btnSummerTime.Name = "btnSummerTime";
+            btnSummerTime.Size = new Size(143, 77);
+            btnSummerTime.TabIndex = 8;
+            btnSummerTime.Text = "Summer Time";
+            btnSummerTime.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnChristmas
             // 
-            button8.Font = new Font("Segoe UI", 12F);
-            button8.Location = new Point(-4, 672);
-            button8.Margin = new Padding(4, 5, 4, 5);
-            button8.Name = "button8";
-            button8.Size = new Size(147, 82);
-            button8.TabIndex = 9;
-            button8.Text = "button8";
-            button8.UseVisualStyleBackColor = true;
+            btnChristmas.Font = new Font("Segoe UI", 12F);
+            btnChristmas.Location = new Point(-4, 672);
+            btnChristmas.Margin = new Padding(4, 5, 4, 5);
+            btnChristmas.Name = "btnChristmas";
+            btnChristmas.Size = new Size(147, 82);
+            btnChristmas.TabIndex = 9;
+            btnChristmas.Text = "Christmas";
+            btnChristmas.UseVisualStyleBackColor = true;
             // 
             // btnMemberLogin
             // 
@@ -196,6 +196,7 @@
             btnMemberLogin.TabIndex = 10;
             btnMemberLogin.Text = "Member Login";
             btnMemberLogin.UseVisualStyleBackColor = true;
+            btnMemberLogin.Click += btnMemberLogin_Click;
             // 
             // btnSignOut
             // 
@@ -721,9 +722,9 @@
             Controls.Add(btn10DollarNote);
             Controls.Add(btnSignOut);
             Controls.Add(btnMemberLogin);
-            Controls.Add(button8);
-            Controls.Add(button7);
-            Controls.Add(button6);
+            Controls.Add(btnChristmas);
+            Controls.Add(btnSummerTime);
+            Controls.Add(btnEaster);
             Controls.Add(button5);
             Controls.Add(btnHot);
             Controls.Add(btnCold);
@@ -760,9 +761,9 @@
         private Button btnCold;
         private Button btnHot;
         private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
+        private Button btnEaster;
+        private Button btnSummerTime;
+        private Button btnChristmas;
         private Button btnMemberLogin;
         private Button btnSignOut;
         private TextBox txtChange;
