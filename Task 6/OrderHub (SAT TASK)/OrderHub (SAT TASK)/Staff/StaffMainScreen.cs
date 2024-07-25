@@ -49,6 +49,23 @@ namespace OrderHub__SAT_Task_
             }
         }
 
+        private void LoadOrdersFromFile()
+        {
+            if (File.Exists(ordersFileName))
+            {
+                // Read orders from text file
+                string[] lines = File.ReadAllLines(ordersFileName);
+                orders.AddRange(lines);
+
+                // Populate ListView with orders
+                foreach (string order in orders)
+                {
+                    lsvOutput.Items.Add(order);
+                }
+            }
+        }
+
+
         private void SaveOrdersToXml()
         {
             // Ensure the ListView has items
@@ -84,24 +101,24 @@ namespace OrderHub__SAT_Task_
             ordersXml.Save(xmlFileName);
 
             MessageBox.Show("Orders saved to XML file.");
-        }
 
-
-        private void LoadOrdersFromFile()
-        {
-            if (File.Exists(ordersFileName))
+            foreach (ListViewItem item in lsvOutput.Items)
             {
-                // Read orders from text file
-                string[] lines = File.ReadAllLines(ordersFileName);
-                orders.AddRange(lines);
-
-                // Populate ListView with orders
-                foreach (string order in orders)
-                {
-                    lsvOutput.Items.Add(order);
-                }
+                XDocument xDocument = XDocument.Load("Orders.xml");
+                XElement root = xDocument.Element("Orders");
+                IEnumerable<XElement> rows = root.Descendants("ID");
+                XElement firstRow = rows.First();
+                firstRow.AddBeforeSelf(
+                   new XElement("ID", item.Text),
+                   new XElement("Details", item.SubItems[1].Text),
+                   new XElement("Price", item.SubItems[2].Text),
+                   new XElement("Quantity", item.SubItems[3].Text));
+                    xDocument.Save("Orders.xml"); 
             }
         }
+
+
+       
 
 
         private void btnSignOut_Click(object sender, EventArgs e)
@@ -382,7 +399,16 @@ namespace OrderHub__SAT_Task_
             double amountPaid = 50;
             double change = amountPaid - totalCost;
 
-            MessageBox.Show($"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}");
+            if (amountPaid < totalCost)
+            {
+                MessageBox.Show("not enough");
+                return;
+            }
+
+            else
+            {
+                txtChange.Text = $"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}";
+            }
 
             // Save orders from ListView to XML file
             SaveOrdersToXml();
@@ -396,7 +422,17 @@ namespace OrderHub__SAT_Task_
             double amountPaid = 10;
             double change = amountPaid - totalCost;
 
-            MessageBox.Show($"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}");
+
+            if (amountPaid < totalCost)
+            {
+                MessageBox.Show("not enough");
+                return;
+            }
+
+            else
+            {
+                txtChange.Text = $"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}";
+            }
 
             // Save orders from ListView to XML file
             SaveOrdersToXml();
@@ -410,7 +446,16 @@ namespace OrderHub__SAT_Task_
             double amountPaid = 20;
             double change = amountPaid - totalCost;
 
-            MessageBox.Show($"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}");
+            if (amountPaid < totalCost)
+            {
+                MessageBox.Show("not enough");
+                return;
+            }
+
+            else
+            {
+                txtChange.Text = $"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}";
+            }
 
             // Save orders from ListView to XML file
             SaveOrdersToXml();
@@ -424,7 +469,17 @@ namespace OrderHub__SAT_Task_
             double amountPaid = 50;
             double change = amountPaid - totalCost;
 
-            MessageBox.Show($"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}");
+            if (amountPaid < totalCost)
+            {
+                MessageBox.Show("not enough");
+                return;
+            }
+
+            else
+            {
+                txtChange.Text = $"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}";
+            }
+
 
             // Save orders from ListView to XML file
             SaveOrdersToXml();

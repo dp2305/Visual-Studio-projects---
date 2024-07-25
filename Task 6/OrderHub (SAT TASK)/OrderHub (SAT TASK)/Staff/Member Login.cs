@@ -99,9 +99,9 @@ namespace OrderHub__SAT_Task_.Staff
             }
         }
 
-        private void MemberLogin_Load(object sender, EventArgs e)
+        private void MemberLogin_Load(object sender, EventArgs e) 
         {
-            LoadOrdersFromFile();
+            LoadOrdersFromFile(); 
         }
 
         private void btnLoginMember_Click(object sender, EventArgs e)

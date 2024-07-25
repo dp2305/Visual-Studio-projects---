@@ -1,3 +1,4 @@
+using OrderHub__SAT_Task_.Staff;
 using System.Xml.Linq;
 
 namespace OrderHub__SAT_Task_
@@ -67,8 +68,8 @@ namespace OrderHub__SAT_Task_
                 // Hide the current form
                 this.Hide();
 
-                // Create a new instance of StaffMainScreen form
-                StaffMainScreen form2 = new StaffMainScreen();
+                // Create a new instance of ChefMainScreen form
+                ChefMainScreen form2 = new ChefMainScreen();
 
                 // Subscribe to the Closed event of form2 to close the current form when form2 is closed
                 form2.Closed += (s, args) => this.Close();

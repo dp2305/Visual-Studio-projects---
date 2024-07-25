@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Orders>
   <Order>
-    <ID>11</ID>
-    <Details>Cheese Burger</Details>
-    <Price>$5</Price>
-    <Quantity>700</Quantity>
+    <ID>38</ID>
+    <Details>Mushroom Burger</Details>
+    <Price>$7</Price>
+    <Quantity>1</Quantity>
   </Order>
 </Orders>
