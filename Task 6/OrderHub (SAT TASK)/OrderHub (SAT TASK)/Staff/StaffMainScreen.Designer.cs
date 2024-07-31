@@ -82,7 +82,6 @@
             btnWaguBurger = new Button();
             btnMain = new Button();
             lsvOutput = new ListView();
-            clhID = new ColumnHeader();
             clhOrderDetail = new ColumnHeader();
             clhPrice = new ColumnHeader();
             clhQuantity = new ColumnHeader();
@@ -654,7 +653,7 @@
             // 
             // lsvOutput
             // 
-            lsvOutput.Columns.AddRange(new ColumnHeader[] { clhID, clhOrderDetail, clhPrice, clhQuantity });
+            lsvOutput.Columns.AddRange(new ColumnHeader[] { clhOrderDetail, clhPrice, clhQuantity });
             lsvOutput.Location = new Point(737, -3);
             lsvOutput.Margin = new Padding(4, 5, 4, 5);
             lsvOutput.Name = "lsvOutput";
@@ -664,24 +663,20 @@
             lsvOutput.View = View.Details;
             lsvOutput.SelectedIndexChanged += lsvOutput_SelectedIndexChanged;
             // 
-            // clhID
-            // 
-            clhID.Text = "ID";
-            // 
             // clhOrderDetail
             // 
-            clhOrderDetail.DisplayIndex = 2;
+            clhOrderDetail.DisplayIndex = 1;
             clhOrderDetail.Text = "OrderDetail";
             clhOrderDetail.Width = 150;
             // 
             // clhPrice
             // 
-            clhPrice.DisplayIndex = 3;
+            clhPrice.DisplayIndex = 2;
             clhPrice.Text = "Price";
             // 
             // clhQuantity
             // 
-            clhQuantity.DisplayIndex = 1;
+            clhQuantity.DisplayIndex = 0;
             clhQuantity.Text = "Quantity";
             clhQuantity.Width = 100;
             // 
@@ -809,7 +804,6 @@
         private Button btnWaguBurger;
         private Button btnMain;
         private ListView lsvOutput;
-        private ColumnHeader clhID;
         private ColumnHeader clhQuantity;
         private ColumnHeader clhOrderDetail;
         private ColumnHeader clhPrice;

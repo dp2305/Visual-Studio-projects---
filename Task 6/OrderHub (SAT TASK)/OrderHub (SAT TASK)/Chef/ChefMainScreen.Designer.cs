@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             lsvOutput = new ListView();
-            columnHeader1 = new ColumnHeader();
-            Ingredients = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
+            columnHeader1 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
             btnLoad = new Button();
             btnConfirm = new Button();
             btnReject = new Button();
@@ -43,24 +43,28 @@
             // 
             // lsvOutput
             // 
-            lsvOutput.Columns.AddRange(new ColumnHeader[] { columnHeader1, Ingredients, columnHeader2 });
+            lsvOutput.Columns.AddRange(new ColumnHeader[] { columnHeader2, columnHeader1, columnHeader4 });
             lsvOutput.Location = new Point(-2, 1);
             lsvOutput.Name = "lsvOutput";
             lsvOutput.Size = new Size(885, 609);
             lsvOutput.TabIndex = 0;
             lsvOutput.UseCompatibleStateImageBehavior = false;
+            lsvOutput.View = View.Details;
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Order ID";
+            columnHeader2.Width = 350;
             // 
             // columnHeader1
             // 
             columnHeader1.Text = "Item";
+            columnHeader1.Width = 350;
             // 
-            // Ingredients
+            // columnHeader4
             // 
-            Ingredients.Text = "ingredients";
-            // 
-            // columnHeader2
-            // 
-            columnHeader2.Text = "Order Details";
+            columnHeader4.Text = "Quantity";
+            columnHeader4.Width = 180;
             // 
             // btnLoad
             // 
@@ -68,7 +72,7 @@
             btnLoad.Name = "btnLoad";
             btnLoad.Size = new Size(305, 149);
             btnLoad.TabIndex = 1;
-            btnLoad.Text = "xxx";
+            btnLoad.Text = "Load";
             btnLoad.UseVisualStyleBackColor = true;
             btnLoad.Click += btnLoad_Click;
             // 
@@ -80,6 +84,7 @@
             btnConfirm.TabIndex = 2;
             btnConfirm.Text = "Confirm";
             btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Click += btnConfirm_Click;
             // 
             // btnReject
             // 
@@ -89,6 +94,7 @@
             btnReject.TabIndex = 3;
             btnReject.Text = "Reject";
             btnReject.UseVisualStyleBackColor = true;
+            btnReject.Click += btnReject_Click;
             // 
             // btnLogout
             // 
@@ -155,7 +161,7 @@
         private TextBox txtOrderNumber;
         private ListView lsvOrderList;
         private ColumnHeader columnHeader1;
-        private ColumnHeader Ingredients;
+        private ColumnHeader columnHeader4;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
     }

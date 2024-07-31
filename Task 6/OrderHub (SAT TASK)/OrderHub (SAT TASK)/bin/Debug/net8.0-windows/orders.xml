@@ -1,9 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Orders>
-  <Order>
-    <ID>38</ID>
-    <Details>Mushroom Burger</Details>
-    <Price>$7</Price>
-    <Quantity>1</Quantity>
-  </Order>
+  <FullOrder>
+    <ID>4</ID>
+    <Order>
+      <Details>Cheese Burger</Details>
+      <Price>$5</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
+  <FullOrder>
+    <ID>5</ID>
+    <Order>
+      <Details>Double Cheese Burger</Details>
+      <Price>$15</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
+  <FullOrder>
+    <ID>6</ID>
+    <Order>
+      <Details>Three Cheese Burger</Details>
+      <Price>$18</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
+  <FullOrder>
+    <ID>7</ID>
+    <Order>
+      <Details>Eight Cheese Burger</Details>
+      <Price>$20</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
 </Orders>

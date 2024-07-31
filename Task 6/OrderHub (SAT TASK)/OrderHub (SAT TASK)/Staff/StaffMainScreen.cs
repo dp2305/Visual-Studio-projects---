@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
@@ -30,7 +31,7 @@ namespace OrderHub__SAT_Task_
 
         private const string ordersFileName = "orders.txt";
 
-        private const string xmlFileName = "orders.xml";
+        public const string xmlFileName = "orders.xml";
 
 
         private void DeleteLatestInputFromLogFile()
@@ -51,16 +52,23 @@ namespace OrderHub__SAT_Task_
 
         private void LoadOrdersFromFile()
         {
-            if (File.Exists(ordersFileName))
+            if (File.Exists(xmlFileName))
             {
-                // Read orders from text file
-                string[] lines = File.ReadAllLines(ordersFileName);
-                orders.AddRange(lines);
+                XElement ordersXml = XElement.Load(xmlFileName);
 
-                // Populate ListView with orders
-                foreach (string order in orders)
+                // Iterate through each FullOrder element
+                foreach (XElement fullOrder in ordersXml.Elements("FullOrder"))
                 {
-                    lsvOutput.Items.Add(order);
+                    // Iterate through each Order element within the FullOrder
+                    foreach (XElement orderElement in fullOrder.Elements("Order"))
+                    {
+                        ListViewItem listItem = new ListViewItem(fullOrder.Element("ID").Value);
+                        listItem.SubItems.Add(orderElement.Element("Details").Value);
+                        listItem.SubItems.Add(orderElement.Element("Price").Value);
+                        listItem.SubItems.Add(orderElement.Element("Quantity").Value);
+
+                        lsvOutput.Items.Add(listItem);
+                    }
                 }
             }
         }
@@ -82,43 +90,48 @@ namespace OrderHub__SAT_Task_
                 return;
             }
 
-            // Create the root XML element named "Orders"
-            XElement ordersXml = new XElement("Orders");
+            XElement ordersXml;
 
-            // Iterate through each item in the ListView
+            // Check if the XML file already exists
+            if (File.Exists(xmlFileName))
+            {
+                // Load existing XML file
+                ordersXml = XElement.Load(xmlFileName);
+            }
+            else
+            {
+                // Create a new root element if the file does not exist
+                ordersXml = new XElement("Orders");
+            }
+
+            // Generate a new ID
+            int newId = IDgeneration();
+
+            // Create a new FullOrder element with the generated ID
+            XElement fullOrderElement = new XElement("FullOrder",
+                new XElement("ID", newId.ToString()) // Use the generated ID for the full order
+            );
+
+            // Iterate through each item in the ListView and add to the FullOrder element
             foreach (ListViewItem item in lsvOutput.Items)
             {
                 XElement orderElement = new XElement("Order",
-                    new XElement("ID", item.Text),
-                    new XElement("Details", item.SubItems[1].Text),
-                    new XElement("Price", item.SubItems[2].Text),
-                    new XElement("Quantity", item.SubItems[3].Text)
+                    new XElement("Details", item.Text),
+                    new XElement("Price", item.SubItems[1].Text),
+                    new XElement("Quantity", item.SubItems[2].Text)
                 );
-                ordersXml.Add(orderElement);
+                fullOrderElement.Add(orderElement);
             }
 
-            // Save the XML structure to the specified file
+            // Add the FullOrder element to the root
+            ordersXml.Add(fullOrderElement);
+
+            // Save the updated XML structure to the specified file
             ordersXml.Save(xmlFileName);
 
             MessageBox.Show("Orders saved to XML file.");
-
-            foreach (ListViewItem item in lsvOutput.Items)
-            {
-                XDocument xDocument = XDocument.Load("Orders.xml");
-                XElement root = xDocument.Element("Orders");
-                IEnumerable<XElement> rows = root.Descendants("ID");
-                XElement firstRow = rows.First();
-                firstRow.AddBeforeSelf(
-                   new XElement("ID", item.Text),
-                   new XElement("Details", item.SubItems[1].Text),
-                   new XElement("Price", item.SubItems[2].Text),
-                   new XElement("Quantity", item.SubItems[3].Text));
-                    xDocument.Save("Orders.xml"); 
-            }
         }
 
-
-       
 
 
         private void btnSignOut_Click(object sender, EventArgs e)
@@ -136,8 +149,7 @@ namespace OrderHub__SAT_Task_
             form1.Show();
         }
 
-
-        private void AddItemToListViewAndLogFile(string itemName, string price, string quantity)
+        private int IDgeneration()
         {
             // Generate the ID
             int newId = 1;
@@ -163,10 +175,18 @@ namespace OrderHub__SAT_Task_
                 tw.WriteLine(record);
             }
 
+            return newId;
+        }
+
+
+        private void AddItemToListViewAndLogFile(string itemName, string price, string quantity)
+        {
+            
+
             // Create a new ListView item and add it to the ListView
             ListViewItem listItem = new ListViewItem();
-            listItem.Text = id;
-            listItem.SubItems.Add(itemName);
+
+            listItem.Text = (itemName);
             listItem.SubItems.Add(price);
             listItem.SubItems.Add(quantity);
 
@@ -205,17 +225,16 @@ namespace OrderHub__SAT_Task_
 
         private void lsvOutput_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string id = clhID.Text;
+
             string Quantity = clhQuantity.Text;
             string Details = clhOrderDetail.Text;
             string price = clhPrice.Text;
             if (lsvOutput.SelectedItems.Count > 0)
             {
                 // Populate text boxes and combo box with data from the selected item in lvwStudents.
-                id = lsvOutput.SelectedItems[0].Text;          // First column (FirstName).
-                Quantity = lsvOutput.SelectedItems[0].SubItems[1].Text; // Second column (LastName).
-                Details = lsvOutput.SelectedItems[0].SubItems[2].Text;    // Third column (Email).
-                price = lsvOutput.SelectedItems[0].SubItems[3].Text; // Fourth column (PhoneNumber).
+                Quantity = lsvOutput.SelectedItems[0].Text; // Second column (LastName).
+                Details = lsvOutput.SelectedItems[0].SubItems[1].Text;    // Third column (Email).
+                price = lsvOutput.SelectedItems[0].SubItems[2].Text; // Fourth column (PhoneNumber).
             }
         }
 
@@ -266,7 +285,17 @@ namespace OrderHub__SAT_Task_
 
         private void btn0Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[3].Text = numbervalue + "0";
+            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "0";
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            numbervalue = "";
+        }
+
+        private void StaffMainScreen_Load(object sender, EventArgs e)
+        {
+            LoadOrdersFromFile();
         }
 
         private void btn00Numberpad_Click(object sender, EventArgs e)
