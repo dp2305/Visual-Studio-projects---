@@ -13,13 +13,7 @@ namespace OrderHub__SAT_Task_.Staff
             InitializeComponent();
         }
 
-        private string orderNumber() 
-        {
-            var count = XDocument
-        .Load("orders.xml")
-        .XPathSelectElements("FullOrder")
-        .Count();
-        }
+
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -93,7 +87,6 @@ namespace OrderHub__SAT_Task_.Staff
         private void ChefMainScreen_Load(object sender, EventArgs e)
         {
             LoadOrderList();
-             txtOrderNumber.Text = orderNumber();
             
         }
 
@@ -138,9 +131,9 @@ namespace OrderHub__SAT_Task_.Staff
             lsvOutput.Items.Clear();
 
             // Load order details based on the selected ID
-            if (File.Exists(StaffMainScreen.xmlFileName))
+            if (File.Exists(StaffMainScreen.ORDERS))
             {
-                XElement ordersXml = XElement.Load(StaffMainScreen.xmlFileName);
+                XElement ordersXml = XElement.Load(StaffMainScreen.ORDERS);
 
                 // Iterate through each FullOrder element
                 foreach (XElement fullOrder in ordersXml.Elements("FullOrder"))

@@ -10,6 +10,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using System.Xml.Linq;
 using static System.Windows.Forms.DataFormats;
 
@@ -17,7 +18,7 @@ namespace OrderHub__SAT_Task_
 {
     public partial class StaffMainScreen : Form
     {
-        private string logFilePath = "ID.txt";
+        private string ID = "ID.txt";
         public string numbervalue = "";
 
         public StaffMainScreen()
@@ -29,15 +30,17 @@ namespace OrderHub__SAT_Task_
 
         private List<string> orders = new List<string>();
 
-        private const string ordersFileName = "orders.txt";
+        private const string ORDER = "orders.txt";
 
-        public const string xmlFileName = "orders.xml";
+        public const string ORDERS = "orders.xml";
+
+        public const string FOODITEMLIST = "FoodItemList.xml";
 
 
         private void DeleteLatestInputFromLogFile()
         {
             // Read all lines from the log file
-            string[] lines = File.ReadAllLines(logFilePath);
+            string[] lines = File.ReadAllLines(ID);
 
             // Check if there are any entries in the log
             if (lines.Length > 0)
@@ -46,15 +49,15 @@ namespace OrderHub__SAT_Task_
                 Array.Resize(ref lines, lines.Length - 1);
 
                 // Write the updated entries back to the log file
-                File.WriteAllLines(logFilePath, lines);
+                File.WriteAllLines(ID, lines);
             }
         }
 
         private void LoadOrdersFromFile()
         {
-            if (File.Exists(xmlFileName))
+            if (File.Exists(ORDERS))
             {
-                XElement ordersXml = XElement.Load(xmlFileName);
+                XElement ordersXml = XElement.Load(ORDERS);
 
                 // Iterate through each FullOrder element
                 foreach (XElement fullOrder in ordersXml.Elements("FullOrder"))
@@ -74,6 +77,13 @@ namespace OrderHub__SAT_Task_
         }
 
 
+        private void LoadFoodItemFromFile() 
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load("FoodItemList.xml");
+        }
+
+
         private void SaveOrdersToXml()
         {
             // Ensure the ListView has items
@@ -84,7 +94,7 @@ namespace OrderHub__SAT_Task_
             }
 
             // Validate file path (optional)
-            if (string.IsNullOrWhiteSpace(xmlFileName))
+            if (string.IsNullOrWhiteSpace(ORDERS))
             {
                 MessageBox.Show("Invalid file path.");
                 return;
@@ -93,10 +103,10 @@ namespace OrderHub__SAT_Task_
             XElement ordersXml;
 
             // Check if the XML file already exists
-            if (File.Exists(xmlFileName))
+            if (File.Exists(ORDERS))
             {
                 // Load existing XML file
-                ordersXml = XElement.Load(xmlFileName);
+                ordersXml = XElement.Load(ORDERS);
             }
             else
             {
@@ -127,7 +137,7 @@ namespace OrderHub__SAT_Task_
             ordersXml.Add(fullOrderElement);
 
             // Save the updated XML structure to the specified file
-            ordersXml.Save(xmlFileName);
+            ordersXml.Save(ORDERS);
 
             MessageBox.Show("Orders saved to XML file.");
         }
@@ -153,9 +163,9 @@ namespace OrderHub__SAT_Task_
         {
             // Generate the ID
             int newId = 1;
-            if (File.Exists(logFilePath))
+            if (File.Exists(ID))
             {
-                string[] lines = File.ReadAllLines(logFilePath);
+                string[] lines = File.ReadAllLines(ID);
 
                 // If there are existing records, calculate the new ID based on the last record
                 if (lines.Length > 0)
@@ -170,7 +180,7 @@ namespace OrderHub__SAT_Task_
             string record = $"{id}";
 
             // Write the record to the log file
-            using (TextWriter tw = new StreamWriter(logFilePath, true))
+            using (TextWriter tw = new StreamWriter(ID, true))
             {
                 tw.WriteLine(record);
             }
@@ -183,7 +193,6 @@ namespace OrderHub__SAT_Task_
         {
             
 
-            // Create a new ListView item and add it to the ListView
             ListViewItem listItem = new ListViewItem();
 
             listItem.Text = (itemName);
@@ -328,7 +337,22 @@ namespace OrderHub__SAT_Task_
 
         private void btnCheeseBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Cheese Burger", "$5", "1");
+            // Load the XML document
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load("C:\\Users\\duttp\\source\\repos\\Visual-Studio-projects-\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\bin\\Debug\\net8.0-windows\\FoodItemList.xml");
+
+            // Navigate to the Price element under CheeseBurger
+            XmlNode priceNode = xmlDoc.SelectSingleNode("/FoodItems/Item/CheeseBurger/Price");
+
+            // Check if the node was found
+            if (priceNode != null)
+            {
+                // Display the price in a message box
+                MessageBox.Show("The price of the Cheese Burger is " + priceNode.InnerText);
+            }
+
+
+            //AddItemToListViewAndLogFile("Cheese Burger", "$5", "1");
         }
 
         private void btnDoubleCheeseBurger_Click(object sender, EventArgs e)
