@@ -1,6 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <FoodItems>
   <Item>
-    <CheeseBurger> Cheese Burger<Price>$5</Price></CheeseBurger>
+    <CheeseBurger> Cheese Burger<Price>$5</Price><Quantity>1</Quantity></CheeseBurger>
   </Item>
+  <Item>
+    <DoubleCheeseBurger> Double Cheese Burger<Price>$7</Price><Quantity>1</Quantity></DoubleCheeseBurger>
+  </Item>
+  <Item>
+    <TripleCheeseBurger> Triple Cheese Burger<Price>$9</Price><Quantity>1</Quantity></TripleCheeseBurger>
+  </Item>
+   <Item>
+    <EightCheeseBurger> Eight Cheese Burger<Price>$9</Price><Quantity>1</Quantity></EightCheeseBurger>
+  </Item>
+  <Item>
+    <AngusBeefBurger> Angus Beef Burger<Price>$9</Price><Quantity>1</Quantity></AngusBeefBurger>
+  </Item>
+  <Item>
+    <HamBurger> Ham Burger<Price>$7</Price><Quantity>1</Quantity></HamBurger>
+  </Item>
+  <Item>
+    <MushroomBurger> Mushroom Burger<Price>$9</Price><Quantity>1</Quantity></MushroomBurger>
+  </Item>
+    <Item>
+    <BaconCheeseBurger> Bacon Cheese Burger<Price>$50</Price><Quantity>1</Quantity></BaconCheeseBurger>
+  </Item>
+  <Item>
+    <WaguBurger> Wagu Burger<Price>$50</Price><Quantity>1</Quantity></WaguBurger>
+  </Item>
+  <Item>
+    <TurkeyBurger> Turkey Burger<Price>$10</Price><Quantity>1</Quantity></TurkeyBurger>
+  </Item>
+  <Item>
+    <ChickenBurger> Chicken Burger<Price>$9</Price><Quantity>1</Quantity></ChickenBurger>
+  </Item>
+  <Item>
+    <ChiliBurger> ChiliBurger<Price>$5</Price><Quantity>1</Quantity></ChiliBurger>
+  </Item>
+  <Item>
+    <LambBurger> Lamb Burger<Price>$8</Price><Quantity>1</Quantity></LambBurger>
+  </Item>
+  <Item>
+    <BBQBurger> BBQ Burger<Price>$9</Price><Quantity>1</Quantity></BBQBurger>
+  </Item>
+  <Item>
+    <ElkBurger> Elk Burger<Price>$15</Price><Quantity>1</Quantity></ElkBurger>
+  </Item>
+  <Item>
+    <OnionBurger> OnionBurger<Price>$9</Price><Quantity>1</Quantity></OnionBurger>
+  </Item>
+  <Item>
+    <SalmonBurger> Salmon Burger<Price>$12</Price><Quantity>1</Quantity></SalmonBurger>
+  </Item>
+  <Item>
+    <PizzaBurger> PizzaBurger<Price>$10</Price><Quantity>1</Quantity></PizzaBurger>
+  </Item>
+  <Item>
+    <TeriyakiBurger> Teriyaki Burger<Price>$9</Price><Quantity>1</Quantity></TeriyakiBurger>
+  </Item>
+  <Item>
+    <BlackBeanBurger> Black Bean Burger<Price>$9</Price><Quantity>1</Quantity></BlackBeanBurger>
+  </Item>
+
 </FoodItems>

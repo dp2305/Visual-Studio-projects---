@@ -188,18 +188,53 @@ namespace OrderHub__SAT_Task_
             return newId;
         }
 
+        private class XmlHelper
+        {
+            public static void DisplayItemDetails(string xmlFilePath, string itemName, ListView lsvOutput)
+            {
+                // Check if the file path exists
+                if (System.IO.File.Exists(xmlFilePath))
+                {
+                    // Create a new XmlDocument object and load the XML file
+                    XmlDocument xmlDoc = new XmlDocument();
+                    xmlDoc.Load(xmlFilePath);
 
-        private void AddItemToListViewAndLogFile(string itemName, string price, string quantity)
+                    // Build the XPath query dynamically based on the item name
+                    string xpathQuery = $"/FoodItems/Item/{itemName}/Price";
+                    XmlNode priceNode = xmlDoc.SelectSingleNode(xpathQuery);
+
+                    // Check if the price node was found
+                    if (priceNode != null)
+                    {
+                        string price = priceNode.InnerText;
+
+                        // Get the Quantity node
+                        string quantityXpathQuery = $"/FoodItems/Item/{itemName}/Quantity";
+                        XmlNode quantityNode = xmlDoc.SelectSingleNode(quantityXpathQuery);
+
+                        // Check if the quantity node was found
+                        string quantity = quantityNode != null ? quantityNode.InnerText : "N/A";
+                        ListViewItem listItem = new ListViewItem();
+
+                        listItem.Text = (itemName);
+                        listItem.SubItems.Add(price);
+                        listItem.SubItems.Add(quantity);
+                        lsvOutput.Items.Insert(0, listItem);
+                    }
+                    else
+                    {
+                        // Handle the case where the price node was not found
+                        MessageBox.Show($"The item '{itemName}' could not be found.");
+                    }
+                }
+            }
+        }
+
+        private void AddItemToListView(string itemName, string price, string quantity)
         {
             
 
-            ListViewItem listItem = new ListViewItem();
 
-            listItem.Text = (itemName);
-            listItem.SubItems.Add(price);
-            listItem.SubItems.Add(quantity);
-
-            lsvOutput.Items.Insert(0, listItem);
         }
 
 
@@ -247,81 +282,87 @@ namespace OrderHub__SAT_Task_
             }
         }
 
+        // Updates the number value and the TextBox with the selected number.
+        private void UpdateNumberValue(string value)
+        {
+            numbervalue += value;
+            lsvOutput.Items[0].SubItems[2].Text = numbervalue;
+        }
+
         private void btn1Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "1";
+            UpdateNumberValue("1");
         }
 
         private void btn2Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "2";
+            UpdateNumberValue("2");
         }
 
         private void btn3Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "3";
+            UpdateNumberValue("3");
         }
 
         private void btn4Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "4";
+            UpdateNumberValue("4");
         }
 
         private void btn5Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "5";
+            UpdateNumberValue("5");
         }
 
         private void btn6Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "6";
+            UpdateNumberValue("6");
         }
 
         private void btn7Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "7";
+            UpdateNumberValue("7");
         }
 
         private void btn8Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "8";
+            UpdateNumberValue("8");
         }
 
         private void btn9Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "9";
+            UpdateNumberValue("9");
         }
 
         private void btn0Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[3].Text = numbervalue = "0";
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            numbervalue = "";
-        }
-
-        private void StaffMainScreen_Load(object sender, EventArgs e)
-        {
-            LoadOrdersFromFile();
+            UpdateNumberValue("0");
         }
 
         private void btn00Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[3].Text = numbervalue + "00";
+            UpdateNumberValue("00");
         }
 
         private void btnDecimalpointNumberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[3].Text = numbervalue + ".";
+            // Add a decimal point only if there isn't one already
+            if (!numbervalue.Contains("."))
+            {
+                UpdateNumberValue(".");
+            }
         }
 
         private void btnDeleteNumerpad_Click(object sender, EventArgs e)
         {
-            DeleteLatestInputFromLogFile();
-            lsvOutput.Items.RemoveAt(0);
+            // Remove the last character from the numbervalue string
+            if (numbervalue.Length > 0)
+            {
+                numbervalue = numbervalue.Substring(0, numbervalue.Length - 1);
+                lsvOutput.Items[0].SubItems[3].Text = numbervalue;
+            }
         }
+
 
         private void btnCreditPayment_Click(object sender, EventArgs e)
         {
@@ -337,112 +378,116 @@ namespace OrderHub__SAT_Task_
 
         private void btnCheeseBurger_Click(object sender, EventArgs e)
         {
-            // Load the XML document
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:\\Users\\duttp\\source\\repos\\Visual-Studio-projects-\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\bin\\Debug\\net8.0-windows\\FoodItemList.xml");
-
-            // Navigate to the Price element under CheeseBurger
-            XmlNode priceNode = xmlDoc.SelectSingleNode("/FoodItems/Item/CheeseBurger/Price");
-
-            // Check if the node was found
-            if (priceNode != null)
-            {
-                // Display the price in a message box
-                MessageBox.Show("The price of the Cheese Burger is " + priceNode.InnerText);
-            }
-
-
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\OneDrive\Documents\GitHub\Visual-Studio-projects---\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "CheeseBurger",lsvOutput);
             //AddItemToListViewAndLogFile("Cheese Burger", "$5", "1");
         }
 
         private void btnDoubleCheeseBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Double Cheese Burger", "$15", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "DoubleCheeseBurger",
+                        lsvOutput);
         }
 
         private void btnThreeCheeseBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Three Cheese Burger", "$18", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "TripleCheeseBurger",
+                        lsvOutput);
         }
 
         private void EightCheeseBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Eight Cheese Burger", "$20", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "EightCheeseBurger",
+                        lsvOutput);
         }
 
         private void btnAngusBeefBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Angus Beef Burger", "$10", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "AngusBeefBurger",
+                        lsvOutput);
         }
 
         private void btnHamBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Ham Burger", "$8", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "HamBurger",
+                        lsvOutput);
         }
 
         private void btnMushroomBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Mushroom Burger", "$7", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "MushroomBurger",
+                        lsvOutput);
         }
 
         private void btnBaconCheeseBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Bacon Cheese Burger", "$10", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "BaconCheeseBurger",
+                        lsvOutput);
         }
 
         private void btnTurkeyBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Turkey Burger", "$12", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "TurkeyBurger",
+                        lsvOutput);
         }
 
         private void btnChickenBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Chicken Burger", "$13", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "ChickenBurger",
+                        lsvOutput);
         }
 
         private void btnChiliBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Chili Burger", "$5", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "ChiliBurger",
+                        lsvOutput);
         }
 
         private void btnLambBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Lamb Burger", "$7", "1");
+                   XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "LambBurger",
+                        lsvOutput);
         }
 
         private void btnBBQBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("BBQ Burger", "$5", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "BBQBurger",
+                        lsvOutput);
         }
 
         private void btnElkBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Elk Burger", "$13", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "ElkBurger",
+                        lsvOutput);
         }
 
         private void btnOnionBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Onion Burger", "$9", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "OnionBurger",
+                        lsvOutput);
         }
 
         private void btnSalmonBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Salmon Burger", "$10", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "SalmonBurger",
+                        lsvOutput);
         }
 
         private void btnPizzaBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Pizza Burger", "$12", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "PizzaBurger",
+                        lsvOutput);
         }
 
         private void btnTeriyakiBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Teriyaki Burger", "$18", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "TeriyakiBurger",
+                        lsvOutput);
         }
 
         private void btnBlackbeanBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Black Bean Burger", "$5", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "BlackBeanBurger",
+                        lsvOutput);
         }
 
         private void btn5DollarNote_Click(object sender, EventArgs e)
@@ -541,7 +586,8 @@ namespace OrderHub__SAT_Task_
 
         private void btnWaguBurger_Click(object sender, EventArgs e)
         {
-            AddItemToListViewAndLogFile("Wagu Burger", "$50", "1");
+            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "WaguBurger",
+                        lsvOutput);
         }
 
         private void btnSalePayment_Click(object sender, EventArgs e)

@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\orderhub (sat task)\\staff\\staffmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\staff\\staffmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\staff\\staffmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\staff\\staffmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\orderhub (sat task)\\chef\\chefmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\chef\\chefmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\chef\\chefmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\chef\\chefmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChefMainScreen.cs",
+              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs",
+              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs",
+              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs",
+              "RelativeToolTip": "OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs",
+              "ViewState": "AQIAAM0AAAAAAAAAAAAAAIcAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T10:25:26.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StaffMainScreen.cs",
+              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
+              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
+              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
+              "RelativeToolTip": "OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
+              "ViewState": "AQIAABEBAAAAAAAAAAAowC4BAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T10:25:26.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StaffMainScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
+              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
+              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs [Design]",
+              "RelativeToolTip": "OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T10:25:26.593Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChefMainScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs",
+              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs",
+              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs [Design]",
+              "RelativeToolTip": "OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T10:25:26.608Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
