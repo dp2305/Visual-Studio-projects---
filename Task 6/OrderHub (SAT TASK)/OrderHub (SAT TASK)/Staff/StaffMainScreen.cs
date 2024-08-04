@@ -19,12 +19,8 @@ namespace OrderHub__SAT_Task_
     public partial class StaffMainScreen : Form
     {
         private string ID = "ID.txt";
-        public string numbervalue = "";
 
-        public StaffMainScreen()
-        {
-            InitializeComponent();
-        }
+        public string numbervalue = "";
 
         public static int selected_ID = 0;
 
@@ -35,6 +31,13 @@ namespace OrderHub__SAT_Task_
         public const string ORDERS = "orders.xml";
 
         public const string FOODITEMLIST = "FoodItemList.xml";
+
+        public StaffMainScreen()
+        {
+            InitializeComponent();
+        }
+
+       
 
 
         private void DeleteLatestInputFromLogFile()
@@ -229,14 +232,6 @@ namespace OrderHub__SAT_Task_
                 }
             }
         }
-
-        private void AddItemToListView(string itemName, string price, string quantity)
-        {
-            
-
-
-        }
-
 
         private double CalculateTotalCost()
         {

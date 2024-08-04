@@ -733,7 +733,7 @@
             Controls.Add(btnCreditPayment);
             ForeColor = Color.Black;
             Name = "StaffMainScreen";
-            Text = "Form2";
+            Text = "Staff Main Screen";
             ResumeLayout(false);
             PerformLayout();
         }

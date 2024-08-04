@@ -3,7 +3,13 @@
   <users>
     <username>1</username>
     <pwd>1</pwd>
+	</users>
+	<users>
 	<Chefuser>2</Chefuser>
 	<ChefPwd>2</ChefPwd>
+	</users>
+	<users>
+	<adminuser>3</adminuser>
+	<adminpwd>3</adminpwd>
   </users>
 </profile>  
