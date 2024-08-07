@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FoodItems>
+   <Item>
+    <Brownie>Brownie<Price>$5</Price><Quantity>1</Quantity></Brownie>
+  </Item>
+  <Item>
+	<BannaBread>Banna Bread<Price>$3</Price><Quantity>1</Quantity></BannaBread>
+  </Item>
+  <Item>
+    <ChocoMousse>Choco Mousse<Price>$4</Price><Quantity>1</Quantity></ChocoMousse>
+  </Item>
+  <Item>
+	<StickyDatePudding>Sticky Date Pudding<Price>$5</Price><Quantity>1</Quantity></StickyDatePudding>
+  </Item>
+  <Item>
+	<ChocoLavaCake>Choco Lava Cake<Price>$5</Price><Quantity>1</Quantity></ChocoLavaCake>
+  </Item>
+  <Item>
+	<CarrotCake>Carrot Cake<Price>$3</Price><Quantity>1</Quantity></CarrotCake>
+  </Item>
+  <Item>
+	<LemonSlice>Lemon Slice<Price>$2</Price><Quantity>1</Quantity></LemonSlice>
+  </Item>
+  <Item>
+	<Tiramisu>Tiramisu <Price>$7</Price><Quantity>1</Quantity></Tiramisu>
+  </Item>
+</FoodItems>

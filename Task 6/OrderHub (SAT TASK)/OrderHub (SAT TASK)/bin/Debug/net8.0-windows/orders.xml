@@ -9,14 +9,6 @@
     </Order>
   </FullOrder>
   <FullOrder>
-    <ID>5</ID>
-    <Order>
-      <Details>Double Cheese Burger</Details>
-      <Price>$15</Price>
-      <Quantity>1</Quantity>
-    </Order>
-  </FullOrder>
-  <FullOrder>
     <ID>6</ID>
     <Order>
       <Details>Three Cheese Burger</Details>

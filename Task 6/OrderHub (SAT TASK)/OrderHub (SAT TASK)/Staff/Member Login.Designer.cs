@@ -65,7 +65,7 @@
             btnMemberLogOut.Name = "btnMemberLogOut";
             btnMemberLogOut.Size = new Size(515, 96);
             btnMemberLogOut.TabIndex = 93;
-            btnMemberLogOut.Text = "Member Logout";
+            btnMemberLogOut.Text = "Signout member ";
             btnMemberLogOut.UseVisualStyleBackColor = true;
             btnMemberLogOut.Click += btnMemberLogOut_Click;
             // 
@@ -75,7 +75,7 @@
             btnLoginMember.Name = "btnLoginMember";
             btnLoginMember.Size = new Size(495, 96);
             btnLoginMember.TabIndex = 92;
-            btnLoginMember.Text = "Member Login";
+            btnLoginMember.Text = "Sign in Member";
             btnLoginMember.UseVisualStyleBackColor = true;
             btnLoginMember.Click += btnLoginMember_Click;
             // 
@@ -103,7 +103,7 @@
             btnSignOut.Name = "btnSignOut";
             btnSignOut.Size = new Size(177, 92);
             btnSignOut.TabIndex = 109;
-            btnSignOut.Text = "Sign Out";
+            btnSignOut.Text = " Sign Out";
             btnSignOut.UseVisualStyleBackColor = true;
             btnSignOut.Click += btnSignOut_Click;
             // 
@@ -234,8 +234,8 @@
             // 
             // txtMemberSigninOutput
             // 
-            txtMemberSigninOutput.Font = new Font("Microsoft Sans Serif", 8.25F);
-            txtMemberSigninOutput.Location = new Point(494, -3);
+            txtMemberSigninOutput.Font = new Font("Microsoft Sans Serif", 24F);
+            txtMemberSigninOutput.Location = new Point(506, -3);
             txtMemberSigninOutput.Multiline = true;
             txtMemberSigninOutput.Name = "txtMemberSigninOutput";
             txtMemberSigninOutput.Size = new Size(470, 80);

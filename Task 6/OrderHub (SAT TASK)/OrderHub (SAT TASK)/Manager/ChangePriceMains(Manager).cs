@@ -12,9 +12,9 @@ using System.Xml;
 
 namespace OrderHub__SAT_Task_.Manager
 {
-    public partial class ChangepricingMain : Form
+    public partial class ChangePriceMains : Form
     {
-        public ChangepricingMain()
+        public ChangePriceMains()
         {
             InitializeComponent();
         }
@@ -87,21 +87,14 @@ namespace OrderHub__SAT_Task_.Manager
             }
         }
 
-
-
-        private void btnCheeseBurger_Click(object sender, EventArgs e)
-        {
-            XmlHelper.DisplayItemPrice(
-                @"C:\Users\duttp\OneDrive\Documents\GitHub\Visual-Studio-projects---\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml",
-                "CheeseBurger",  // Use the element name in the XML
-                lsvOutput);
-               
-
-        }
-
         private void btn7Numberpad_Click(object sender, EventArgs e)
         {
             lsvOutput.Items[0].SubItems[1].Text = "7";
+        }
+
+        private void btnBrownie_Click(object sender, EventArgs e)
+        {
+            XmlHelper.DisplayItemPrice("DessertFoodItems.xml", "Brownie", lsvOutput);
         }
     }
 }

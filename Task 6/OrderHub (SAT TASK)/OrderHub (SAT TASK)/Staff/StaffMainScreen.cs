@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,56 +37,6 @@ namespace OrderHub__SAT_Task_
         {
             InitializeComponent();
         }
-
-       
-
-
-        private void DeleteLatestInputFromLogFile()
-        {
-            // Read all lines from the log file
-            string[] lines = File.ReadAllLines(ID);
-
-            // Check if there are any entries in the log
-            if (lines.Length > 0)
-            {
-                // Remove the last entry
-                Array.Resize(ref lines, lines.Length - 1);
-
-                // Write the updated entries back to the log file
-                File.WriteAllLines(ID, lines);
-            }
-        }
-
-        private void LoadOrdersFromFile()
-        {
-            if (File.Exists(ORDERS))
-            {
-                XElement ordersXml = XElement.Load(ORDERS);
-
-                // Iterate through each FullOrder element
-                foreach (XElement fullOrder in ordersXml.Elements("FullOrder"))
-                {
-                    // Iterate through each Order element within the FullOrder
-                    foreach (XElement orderElement in fullOrder.Elements("Order"))
-                    {
-                        ListViewItem listItem = new ListViewItem(fullOrder.Element("ID").Value);
-                        listItem.SubItems.Add(orderElement.Element("Details").Value);
-                        listItem.SubItems.Add(orderElement.Element("Price").Value);
-                        listItem.SubItems.Add(orderElement.Element("Quantity").Value);
-
-                        lsvOutput.Items.Add(listItem);
-                    }
-                }
-            }
-        }
-
-
-        private void LoadFoodItemFromFile() 
-        {
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("FoodItemList.xml");
-        }
-
 
         private void SaveOrdersToXml()
         {
@@ -373,140 +324,137 @@ namespace OrderHub__SAT_Task_
 
         private void btnCheeseBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\OneDrive\Documents\GitHub\Visual-Studio-projects---\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "CheeseBurger",lsvOutput);
-            //AddItemToListViewAndLogFile("Cheese Burger", "$5", "1");
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "CheeseBurger", lsvOutput);
         }
 
         private void btnDoubleCheeseBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "DoubleCheeseBurger",
-                        lsvOutput);
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "DoubleCheeseBurger",lsvOutput);
         }
 
         private void btnThreeCheeseBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "TripleCheeseBurger",
-                        lsvOutput);
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "TripleCheeseBurger",lsvOutput);
         }
 
         private void EightCheeseBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "EightCheeseBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "EightCheeseBurger",
                         lsvOutput);
         }
 
         private void btnAngusBeefBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "AngusBeefBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "AngusBeefBurger",
                         lsvOutput);
         }
 
         private void btnHamBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "HamBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "HamBurger",
                         lsvOutput);
         }
 
         private void btnMushroomBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "MushroomBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "MushroomBurger",
                         lsvOutput);
         }
 
         private void btnBaconCheeseBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "BaconCheeseBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "BaconCheeseBurger",
                         lsvOutput);
         }
 
         private void btnTurkeyBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "TurkeyBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "TurkeyBurger",
                         lsvOutput);
         }
 
         private void btnChickenBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "ChickenBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "ChickenBurger",
                         lsvOutput);
         }
 
         private void btnChiliBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "ChiliBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "ChiliBurger",
                         lsvOutput);
         }
 
         private void btnLambBurger_Click(object sender, EventArgs e)
         {
-                   XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "LambBurger",
-                        lsvOutput);
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "LambBurger",
+                 lsvOutput);
         }
 
         private void btnBBQBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "BBQBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "BBQBurger",
                         lsvOutput);
         }
 
         private void btnElkBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "ElkBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "ElkBurger",
                         lsvOutput);
         }
 
         private void btnOnionBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "OnionBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "OnionBurger",
                         lsvOutput);
         }
 
         private void btnSalmonBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "SalmonBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "SalmonBurger",
                         lsvOutput);
         }
 
         private void btnPizzaBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "PizzaBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "PizzaBurger",
                         lsvOutput);
         }
 
         private void btnTeriyakiBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "TeriyakiBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "TeriyakiBurger",
                         lsvOutput);
         }
 
         private void btnBlackbeanBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "BlackBeanBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "BlackBeanBurger",
                         lsvOutput);
         }
 
-        private void btn5DollarNote_Click(object sender, EventArgs e)
-        {
-            // Calculate the total cost
-            double totalCost = CalculateTotalCost();
-            double amountPaid = 50;
-            double change = amountPaid - totalCost;
-
-            if (amountPaid < totalCost)
+            private void btn5DollarNote_Click(object sender, EventArgs e)
             {
-                MessageBox.Show("not enough");
-                return;
-            }
+                // Calculate the total cost
+                double totalCost = CalculateTotalCost();
+                double amountPaid = 5;
+                double change = amountPaid - totalCost;
 
-            else
-            {
-                txtChange.Text = $"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}";
-            }
+                if (amountPaid < totalCost)
+                {
+                    MessageBox.Show("not enough");
+                    return;
+                }
 
-            // Save orders from ListView to XML file
-            SaveOrdersToXml();
-            lsvOutput.Items.Clear();
-        }
+                else
+                {
+                    txtChange.Text = $"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}";
+                }
+
+                // Save orders from ListView to XML file
+                SaveOrdersToXml();
+                lsvOutput.Items.Clear();
+            }
 
         private void btn10DollarNote_Click(object sender, EventArgs e)
         {
@@ -544,7 +492,6 @@ namespace OrderHub__SAT_Task_
                 MessageBox.Show("not enough");
                 return;
             }
-
             else
             {
                 txtChange.Text = $"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}";
@@ -581,7 +528,7 @@ namespace OrderHub__SAT_Task_
 
         private void btnWaguBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails(@"C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT TASK)\bin\Debug\net8.0-windows\FoodItemList.xml", "WaguBurger",
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "WaguBurger",
                         lsvOutput);
         }
 
@@ -597,7 +544,7 @@ namespace OrderHub__SAT_Task_
             // Hide the current form.
             this.Hide();
 
-            // Create a new instance of EditDelete form.
+            // Create a new instance of MemberLogin form.
             MemberLogin memberlogin = new MemberLogin();
 
             // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
@@ -605,6 +552,21 @@ namespace OrderHub__SAT_Task_
 
             // Display MemberLogin.
             memberlogin.Show();
+        }
+
+        private void btnDessert_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            StaffDessertScreen StaffDessertScreen = new StaffDessertScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffDessertScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffDessertScreen.Show();
         }
     }
 }

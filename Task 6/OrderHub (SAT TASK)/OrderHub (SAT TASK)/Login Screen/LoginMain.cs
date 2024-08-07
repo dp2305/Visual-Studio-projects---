@@ -98,13 +98,13 @@ namespace OrderHub__SAT_Task_
                 this.Hide();
 
                 // Create a new instance of ChefMainScreen form
-                ChangepricingMain ChangepricingMain = new ChangepricingMain();
+                ManagerMainscreen ManagerMainscreen = new ManagerMainscreen();
 
                 // Subscribe to the Closed event of form2 to close the current form when form2 is closed
-                ChangepricingMain.Closed += (s, args) => this.Close();
+                ManagerMainscreen.Closed += (s, args) => this.Close();
 
                 // Display form2
-                ChangepricingMain.Show();
+                ManagerMainscreen.Show();
 
             }
             // If neither credentials match, show an error message
