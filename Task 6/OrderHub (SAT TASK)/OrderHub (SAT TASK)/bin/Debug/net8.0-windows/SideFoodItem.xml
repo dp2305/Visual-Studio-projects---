@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FoodItems>
+  <Item>
+    <Fries>Fries <Price>$5</Price><Quantity>1</Quantity></Fries>
+  </Item>
+  <Item>
+    <GravyFries>Gravy Fries<Price>$8</Price><Quantity>1</Quantity></GravyFries>
+  </Item>
+  <Item>
+    <BigDawg>Big Dawg <Price>$10</Price><Quantity>1</Quantity></BigDawg>
+  </Item>
+  <Item>
+    <DirtyDingo>Dirty Dingo<Price>$13</Price><Quantity>1</Quantity></DirtyDingo>
+  </Item>
+  <Item>
+    <Ribs>Ribs<Price>$28</Price><Quantity>1</Quantity></Ribs>
+  </Item>
+  <Item>
+    <TheDogFather>The Dogfather<Price>$18</Price><Quantity>1</Quantity></TheDogFather>
+  </Item>
+  <Item>
+    <HoundDog><Price>$14</Price><Quantity>1</Quantity></HoundDog>
+  </Item>
+  <Item>
+    <OnionRings><Price>$15</Price><Quantity>1</Quantity></OnionRings>
+  </Item>
+</FoodItems>

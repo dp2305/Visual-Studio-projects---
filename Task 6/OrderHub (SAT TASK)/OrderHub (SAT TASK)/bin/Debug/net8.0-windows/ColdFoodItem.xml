@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FoodItems>
+  <Item>
+    <CocoCola>Coco Cola <Price>$8</Price><Quantity>1</Quantity></CocoCola>
+  </Item>
+  <Item>
+    <Pepsi>Pepsi<Price>$8</Price><Quantity>1</Quantity></Pepsi>
+  </Item>
+  <Item>
+    <Sprite>Sprite<Price>$8</Price><Quantity>1</Quantity></Sprite>
+  </Item>
+  <Item>
+    <Fanta>Fanta <Price>$8</Price><Quantity>1</Quantity></Fanta>
+  </Item>
+  <Item>
+    <Monster>Monster<Price>$10</Price><Quantity>1</Quantity></Monster>
+  </Item>
+  <Item>
+    <MonsterNoSugar>Monster No Sugar <Price>$10</Price><Quantity>1</Quantity></MonsterNoSugar>
+  </Item>
+  <Item>
+    <FuzeMangoGreenIcedTea>Fuze Mango Green Iced Tea<Price>$15</Price><Quantity>1</Quantity></FuzeMangoGreenIcedTea>
+  </Item>
+  <Item>
+    <Solo>solo<Price>$8</Price><Quantity>1</Quantity></Solo>
+  </Item>
+</FoodItems>

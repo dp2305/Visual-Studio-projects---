@@ -3,48 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\manager\\changeprice(manager).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\manager\\changeprice(manager).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\staff\\staffsidesscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\staff\\staffsidesscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\manager\\changepricingmain(manager).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\manager\\changepricingmain(manager).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\staff\\staffsidesscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\staff\\staffsidesscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\staff\\staffmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\staff\\staffmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\staff\\staffdessertscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\staff\\staffdessertscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\manager\\changeprice(manager).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\manager\\changeprice(manager).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\login screen\\loginmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\login screen\\loginmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\staff\\staffdessertscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\staff\\staffdessertscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\orderhub (sat task)\\staff\\staffmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\staff\\staffmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\chef\\chefmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\chef\\chefmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\staff\\xmlfile1.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\staff\\xmlfile1.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\orderhub (sat task)\\login screen\\loginmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\login screen\\loginmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\orderhub (sat task)\\manager\\changepricingmain(manager).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\manager\\changepricingmain(manager).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\staff\\staffmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\staff\\staffmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\staff\\staffcoldscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\staff\\staffcoldscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\staff\\staffcoldscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\staff\\staffcoldscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\orderhub (sat task)\\chef\\chefmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\chef\\chefmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\login screen\\loginmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\login screen\\loginmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\chef\\chefmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\chef\\chefmainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\manager\\changepricemains(manager).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\manager\\changepricemains(manager).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|c:\\users\\duttp\\onedrive\\documents\\github\\visual-studio-projects---\\task 6\\orderhub (sat task)\\orderhub (sat task)\\manager\\changepricingmainscreen(manager).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A3921375-1077-4444-B54B-6B44C4A9872A}|OrderHub (SAT Task)\\OrderHub (SAT Task).csproj|solutionrelative:orderhub (sat task)\\manager\\changepricingmainscreen(manager).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,63 +66,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ChangePricingMain(Manager).cs",
-              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Manager\\ChangePricingMain(Manager).cs",
-              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Manager\\ChangePricingMain(Manager).cs",
-              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Manager\\ChangePricingMain(Manager).cs",
-              "RelativeToolTip": "OrderHub (SAT TASK)\\Manager\\ChangePricingMain(Manager).cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 7,
+              "Title": "StaffColdScreen.cs",
+              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffColdScreen.cs",
+              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Staff\\StaffColdScreen.cs",
+              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffColdScreen.cs",
+              "RelativeToolTip": "OrderHub (SAT TASK)\\Staff\\StaffColdScreen.cs",
+              "ViewState": "AQIAAKoBAAAAAAAAAAAiwK8BAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T03:49:52.639Z",
+              "WhenOpened": "2024-08-07T10:18:47.682Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ChangePrice(Manager).cs",
-              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Manager\\ChangePrice(Manager).cs",
-              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Manager\\ChangePrice(Manager).cs",
-              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Manager\\ChangePrice(Manager).cs",
-              "RelativeToolTip": "OrderHub (SAT TASK)\\Manager\\ChangePrice(Manager).cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAUwEoAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T04:47:59.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "StaffMainScreen.cs",
-              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
-              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
-              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
-              "RelativeToolTip": "OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
-              "ViewState": "AQIAAE0CAAAAAAAAAAAowCEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T10:25:26.084Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "ChefMainScreen.cs",
               "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs",
               "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs",
               "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs",
               "RelativeToolTip": "OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs",
-              "ViewState": "AQIAAFYAAAAAAAAAAAAwwHQAAAAJAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwHQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-04T05:42:48.702Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "StaffSidesScreen.cs",
+              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffSidesScreen.cs",
+              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Staff\\StaffSidesScreen.cs",
+              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffSidesScreen.cs",
+              "RelativeToolTip": "OrderHub (SAT TASK)\\Staff\\StaffSidesScreen.cs",
+              "ViewState": "AQIAALABAAAAAAAAAAAiwM0BAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T08:38:43.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StaffMainScreen.cs",
+              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
+              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
+              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
+              "RelativeToolTip": "OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
+              "ViewState": "AQIAADoCAAAAAAAAAAAiwFYCAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T10:25:26.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StaffDessertScreen.cs",
+              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffDessertScreen.cs",
+              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Staff\\StaffDessertScreen.cs",
+              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffDessertScreen.cs",
+              "RelativeToolTip": "OrderHub (SAT TASK)\\Staff\\StaffDessertScreen.cs",
+              "ViewState": "AQIAALMBAAAAAAAAAAAiwM8BAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T09:07:06.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "LoginMain.cs",
               "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Login Screen\\LoginMain.cs",
               "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Login Screen\\LoginMain.cs",
@@ -120,18 +145,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-04T05:47:50.458Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "XMLFile1.xml",
-              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\XMLFile1.xml",
-              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Staff\\XMLFile1.xml",
-              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\XMLFile1.xml",
-              "RelativeToolTip": "OrderHub (SAT TASK)\\Staff\\XMLFile1.xml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-08-04T04:50:19.002Z"
             }
           ]
         }
@@ -147,68 +160,108 @@
         "Y": 81,
         "Width": 1343,
         "Height": 776,
-        "WindowState": 0
+        "WindowState": 2
       },
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ChangePricingMain(Manager).cs [Design]",
-              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Manager\\ChangePricingMain(Manager).cs",
-              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Manager\\ChangePricingMain(Manager).cs",
-              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Manager\\ChangePricingMain(Manager).cs [Design]",
-              "RelativeToolTip": "OrderHub (SAT TASK)\\Manager\\ChangePricingMain(Manager).cs [Design]",
+              "DocumentIndex": 12,
+              "Title": "ChangePriceMains(Manager).cs [Design]",
+              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Manager\\ChangePriceMains(Manager).cs",
+              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Manager\\ChangePriceMains(Manager).cs",
+              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Manager\\ChangePriceMains(Manager).cs [Design]",
+              "RelativeToolTip": "OrderHub (SAT TASK)\\Manager\\ChangePriceMains(Manager).cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T01:34:54.824Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChangePrice(Manager).cs [Design]",
-              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Manager\\ChangePrice(Manager).cs",
-              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Manager\\ChangePrice(Manager).cs",
-              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Manager\\ChangePrice(Manager).cs [Design]",
-              "RelativeToolTip": "OrderHub (SAT TASK)\\Manager\\ChangePrice(Manager).cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T03:51:43.05Z",
+              "WhenOpened": "2024-08-07T08:14:25.708Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StaffMainScreen.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
-              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
-              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs [Design]",
-              "RelativeToolTip": "OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs [Design]",
+              "DocumentIndex": 13,
+              "Title": "ChangePricingMainScreen(Manager).cs [Design]",
+              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Manager\\ChangePricingMainScreen(Manager).cs",
+              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Manager\\ChangePricingMainScreen(Manager).cs",
+              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Manager\\ChangePricingMainScreen(Manager).cs [Design]",
+              "RelativeToolTip": "OrderHub (SAT TASK)\\Manager\\ChangePricingMainScreen(Manager).cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T10:25:26.593Z"
+              "WhenOpened": "2024-08-07T08:14:28.946Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoginMain.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Login Screen\\LoginMain.cs",
-              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Login Screen\\LoginMain.cs",
-              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Login Screen\\LoginMain.cs [Design]",
-              "RelativeToolTip": "OrderHub (SAT TASK)\\Login Screen\\LoginMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T05:46:52.719Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "ChefMainScreen.cs [Design]",
               "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs",
               "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs",
               "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs [Design]",
               "RelativeToolTip": "OrderHub (SAT TASK)\\Chef\\ChefMainScreen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T05:42:43.131Z"
+              "WhenOpened": "2024-08-04T05:42:43.131Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StaffColdScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffColdScreen.cs",
+              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Staff\\StaffColdScreen.cs",
+              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffColdScreen.cs [Design]",
+              "RelativeToolTip": "OrderHub (SAT TASK)\\Staff\\StaffColdScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T09:44:28.93Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StaffSidesScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffSidesScreen.cs",
+              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Staff\\StaffSidesScreen.cs",
+              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffSidesScreen.cs [Design]",
+              "RelativeToolTip": "OrderHub (SAT TASK)\\Staff\\StaffSidesScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T08:15:40.22Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StaffDessertScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffDessertScreen.cs",
+              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Staff\\StaffDessertScreen.cs",
+              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffDessertScreen.cs [Design]",
+              "RelativeToolTip": "OrderHub (SAT TASK)\\Staff\\StaffDessertScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T08:17:01.974Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StaffMainScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
+              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs",
+              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs [Design]",
+              "RelativeToolTip": "OrderHub (SAT TASK)\\Staff\\StaffMainScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T10:25:26.593Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginMain.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Login Screen\\LoginMain.cs",
+              "RelativeDocumentMoniker": "OrderHub (SAT TASK)\\Login Screen\\LoginMain.cs",
+              "ToolTip": "C:\\Users\\duttp\\OneDrive\\Documents\\GitHub\\Visual-Studio-projects---\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Login Screen\\LoginMain.cs [Design]",
+              "RelativeToolTip": "OrderHub (SAT TASK)\\Login Screen\\LoginMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T05:46:52.719Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -7,18 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
 using System.Xml.Linq;
+using System.Xml;
 
 namespace OrderHub__SAT_Task_.Staff
 {
-    public partial class StaffDessertScreen : Form
+    public partial class StaffSidesScreen : Form
     {
-        public StaffDessertScreen()
+        public StaffSidesScreen()
         {
             InitializeComponent();
         }
-
         public static int selected_ID = 0;
 
         private const string ORDER = "orders.txt";
@@ -187,59 +186,44 @@ namespace OrderHub__SAT_Task_.Staff
             }
         }
 
-        private void btnMain_Click(object sender, EventArgs e)
+        private void btnFries_Click(object sender, EventArgs e)
         {
-            // Hide the current form.
-            this.Hide();
-
-            // Create a new instance of StaffMainScreen form.
-            StaffMainScreen StaffMainScreen = new StaffMainScreen();
-
-            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
-            StaffMainScreen.Closed += (s, args) => this.Close();
-
-            // Display StaffMainScreen.
-            StaffMainScreen.Show();
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "Fries", lsvOutput);
         }
 
-        private void btnBrownie_Click(object sender, EventArgs e)
+        private void btnGravyFries_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails("DessertFoodItems.xml", "Brownie", lsvOutput);
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "GravyFries", lsvOutput);
         }
 
-        private void btnBannaBread_Click(object sender, EventArgs e)
+        private void btnBigDawg_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails("DessertFoodItems.xml", "BannaBread", lsvOutput);
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "BigDawg", lsvOutput);
         }
 
-        private void btnChocolateMousse_Click(object sender, EventArgs e)
+        private void btnDirtyDingo_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails("DessertFoodItems.xml", "ChocoMousse", lsvOutput);
-        }
-
-        private void btnStickyDatePudding_Click(object sender, EventArgs e)
-        {
-            XmlHelper.DisplayItemDetails("DessertFoodItems.xml", "StickyDatePudding", lsvOutput);
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "DirtyDingo", lsvOutput);
         }
 
         private void btnChocoLavaCake_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails("DessertFoodItems.xml", "ChocoLavaCake", lsvOutput);
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "Ribs", lsvOutput);
         }
 
-        private void btnCarrotCake_Click(object sender, EventArgs e)
+        private void btnDogFather_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails("DessertFoodItems.xml", "CarrotCake", lsvOutput);
+            XmlHelper.DisplayItemDetails("TheDogFather.xml", "TheDogFather", lsvOutput);
         }
 
-        private void btnLemonSlice_Click(object sender, EventArgs e)
+        private void btnHoundDog_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails("DessertFoodItems.xml", "LemonSlice", lsvOutput);
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "HoundDog", lsvOutput);
         }
 
-        private void btnTiramisu_Click(object sender, EventArgs e)
+        private void btnOnionRings_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails("DessertFoodItems.xml", "Tiramisu", lsvOutput);
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "OnionRings", lsvOutput);
         }
 
         private void btn5DollarNote_Click(object sender, EventArgs e)
@@ -286,7 +270,6 @@ namespace OrderHub__SAT_Task_.Staff
             // Save orders from ListView to XML file
             SaveOrdersToXml();
             lsvOutput.Items.Clear();
-
         }
 
         private void btn20DollarNote_Click(object sender, EventArgs e)
@@ -310,7 +293,6 @@ namespace OrderHub__SAT_Task_.Staff
             // Save orders from ListView to XML file
             SaveOrdersToXml();
             lsvOutput.Items.Clear();
-
         }
 
         private void btn50DollarNote_Click(object sender, EventArgs e)
@@ -334,7 +316,6 @@ namespace OrderHub__SAT_Task_.Staff
             // Save orders from ListView to XML file
             SaveOrdersToXml();
             lsvOutput.Items.Clear();
-
         }
         private void UpdateNumberValue(string value)
         {
@@ -397,25 +378,6 @@ namespace OrderHub__SAT_Task_.Staff
             UpdateNumberValue("00");
         }
 
-        private void btnDecimalpointNumberpad_Click(object sender, EventArgs e)
-        {
-            // Add a decimal point only if there isn't one already
-            if (!numbervalue.Contains("."))
-            {
-                UpdateNumberValue(".");
-            }
-        }
-
-        private void btnDeleteNumerpad_Click(object sender, EventArgs e)
-        {
-            // Remove the last character from the numbervalue string
-            if (numbervalue.Length > 0)
-            {
-                numbervalue = numbervalue.Substring(0, numbervalue.Length - 1);
-                lsvOutput.Items[0].SubItems[2].Text = numbervalue;
-            }
-        }
-
         private void btnCreditPayment_Click(object sender, EventArgs e)
         {
             // Save orders from ListView to XML file
@@ -435,18 +397,53 @@ namespace OrderHub__SAT_Task_.Staff
             MessageBox.Show("Printing Recipt");
         }
 
-        private void btnSides_Click(object sender, EventArgs e)
+        private void btnDecimalpointNumberpad_Click(object sender, EventArgs e)
+        {
+            // Add a decimal point only if there isn't one already
+            if (!numbervalue.Contains("."))
+            {
+                UpdateNumberValue(".");
+            }
+        }
+
+        private void btnDeleteNumerpad_Click(object sender, EventArgs e)
+        {
+            // Remove the last character from the numbervalue string
+            if (numbervalue.Length > 0)
+            {
+                numbervalue = numbervalue.Substring(0, numbervalue.Length - 1);
+                lsvOutput.Items[0].SubItems[2].Text = numbervalue;
+            }
+        }
+
+        private void btnMain_Click(object sender, EventArgs e)
         {
             // Hide the current form.
             this.Hide();
 
+            // Create a new instance of StaffMainScreen form.
+            StaffMainScreen StaffMainScreen = new StaffMainScreen();
 
-            StaffSidesScreen StaffSidesScreen = new StaffSidesScreen();
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffMainScreen.Closed += (s, args) => this.Close();
 
+            // Display StaffMainScreen.
+            StaffMainScreen.Show();
+        }
 
-            StaffSidesScreen.Closed += (s, args) => this.Close();
+        private void btnDessert_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
 
-            StaffSidesScreen.Show();
+            // Create a new instance of StaffDessertScreen form.
+            StaffDessertScreen StaffDessertScreen = new StaffDessertScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffDessertScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffDessertScreen.Show();
         }
 
         private void btnCold_Click(object sender, EventArgs e)

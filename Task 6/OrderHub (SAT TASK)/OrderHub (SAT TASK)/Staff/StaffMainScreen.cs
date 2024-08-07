@@ -329,12 +329,12 @@ namespace OrderHub__SAT_Task_
 
         private void btnDoubleCheeseBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails("FoodItemList.xml", "DoubleCheeseBurger",lsvOutput);
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "DoubleCheeseBurger", lsvOutput);
         }
 
         private void btnThreeCheeseBurger_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails("FoodItemList.xml", "TripleCheeseBurger",lsvOutput);
+            XmlHelper.DisplayItemDetails("FoodItemList.xml", "TripleCheeseBurger", lsvOutput);
         }
 
         private void EightCheeseBurger_Click(object sender, EventArgs e)
@@ -433,28 +433,28 @@ namespace OrderHub__SAT_Task_
                         lsvOutput);
         }
 
-            private void btn5DollarNote_Click(object sender, EventArgs e)
+        private void btn5DollarNote_Click(object sender, EventArgs e)
+        {
+            // Calculate the total cost
+            double totalCost = CalculateTotalCost();
+            double amountPaid = 5;
+            double change = amountPaid - totalCost;
+
+            if (amountPaid < totalCost)
             {
-                // Calculate the total cost
-                double totalCost = CalculateTotalCost();
-                double amountPaid = 5;
-                double change = amountPaid - totalCost;
-
-                if (amountPaid < totalCost)
-                {
-                    MessageBox.Show("not enough");
-                    return;
-                }
-
-                else
-                {
-                    txtChange.Text = $"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}";
-                }
-
-                // Save orders from ListView to XML file
-                SaveOrdersToXml();
-                lsvOutput.Items.Clear();
+                MessageBox.Show("not enough");
+                return;
             }
+
+            else
+            {
+                txtChange.Text = $"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}";
+            }
+
+            // Save orders from ListView to XML file
+            SaveOrdersToXml();
+            lsvOutput.Items.Clear();
+        }
 
         private void btn10DollarNote_Click(object sender, EventArgs e)
         {
@@ -567,6 +567,36 @@ namespace OrderHub__SAT_Task_
 
             // Display MemberLogin.
             StaffDessertScreen.Show();
+        }
+
+        private void btnSides_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            StaffSidesScreen StaffSidesScreen = new StaffSidesScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffSidesScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffSidesScreen.Show();
+        }
+
+        private void btnCold_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            StaffColdScreen StaffColdScreen = new StaffColdScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffColdScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffColdScreen.Show();
         }
     }
 }

@@ -32,4 +32,12 @@
       <Quantity>1</Quantity>
     </Order>
   </FullOrder>
+  <FullOrder>
+    <ID>9</ID>
+    <Order>
+      <Details>Brownie</Details>
+      <Price>$5</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
 </Orders>
