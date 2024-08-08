@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FoodItems>
+  <Item>
+    <HotChoco>Hot Choco <Price>$6</Price><Quantity>1</Quantity></HotChoco>
+  </Item>
+  <Item>
+    <FlatWhite>Flat White <Price>$5</Price><Quantity>1</Quantity></FlatWhite>
+  </Item>
+  <Item>
+    <Americano>Americano <Price>$5</Price><Quantity>1</Quantity></Americano>
+  </Item>
+  <Item>
+    <Cortado>Cortado <Price>$5</Price><Quantity>1</Quantity></Cortado>
+  </Item>
+  <Item>
+    <Mocha>Mocha <Price>$6</Price><Quantity>1</Quantity></Mocha>
+  </Item>
+  <Item>
+    <cappauccino>cappauccino<Price>$6</Price><Quantity>1</Quantity></cappauccino>
+  </Item>
+  <Item>
+    <Latte>Latte <Price>$6</Price><Quantity>1</Quantity></Latte>
+  </Item>
+  <Item>
+    <Affogato>Affogato <Price>$8</Price><Quantity>1</Quantity></Affogato>
+  </Item>
+</FoodItems>
