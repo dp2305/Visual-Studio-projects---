@@ -33,7 +33,7 @@
             btnChristmas = new Button();
             btnSummerTime = new Button();
             btnEaster = new Button();
-            button5 = new Button();
+            btnSpecial = new Button();
             btnHot = new Button();
             btnCold = new Button();
             btnSides = new Button();
@@ -104,6 +104,7 @@
             btnChristmas.TabIndex = 33;
             btnChristmas.Text = "Christmas";
             btnChristmas.UseVisualStyleBackColor = true;
+            btnChristmas.Click += btnChristmas_Click;
             // 
             // btnSummerTime
             // 
@@ -114,6 +115,7 @@
             btnSummerTime.TabIndex = 32;
             btnSummerTime.Text = "Summer Time";
             btnSummerTime.UseVisualStyleBackColor = true;
+            btnSummerTime.Click += btnSummerTime_Click;
             // 
             // btnEaster
             // 
@@ -124,16 +126,18 @@
             btnEaster.TabIndex = 31;
             btnEaster.Text = "Easter";
             btnEaster.UseVisualStyleBackColor = true;
+            btnEaster.Click += btnEaster_Click;
             // 
-            // button5
+            // btnSpecial
             // 
-            button5.Font = new Font("Segoe UI", 12F);
-            button5.Location = new Point(-3, 277);
-            button5.Name = "button5";
-            button5.Size = new Size(101, 46);
-            button5.TabIndex = 30;
-            button5.Text = "Special";
-            button5.UseVisualStyleBackColor = true;
+            btnSpecial.Font = new Font("Segoe UI", 12F);
+            btnSpecial.Location = new Point(-3, 277);
+            btnSpecial.Name = "btnSpecial";
+            btnSpecial.Size = new Size(101, 46);
+            btnSpecial.TabIndex = 30;
+            btnSpecial.Text = "Special";
+            btnSpecial.UseVisualStyleBackColor = true;
+            btnSpecial.Click += btnSpecial_Click;
             // 
             // btnHot
             // 
@@ -144,6 +148,7 @@
             btnHot.TabIndex = 29;
             btnHot.Text = "Hot";
             btnHot.UseVisualStyleBackColor = true;
+            btnHot.Click += btnHot_Click;
             // 
             // btnCold
             // 
@@ -574,7 +579,7 @@
             Controls.Add(btnChristmas);
             Controls.Add(btnSummerTime);
             Controls.Add(btnEaster);
-            Controls.Add(button5);
+            Controls.Add(btnSpecial);
             Controls.Add(btnHot);
             Controls.Add(btnCold);
             Controls.Add(btnSides);
@@ -594,7 +599,7 @@
         private Button btnChristmas;
         private Button btnSummerTime;
         private Button btnEaster;
-        private Button button5;
+        private Button btnSpecial;
         private Button btnHot;
         private Button btnCold;
         private Button btnSides;

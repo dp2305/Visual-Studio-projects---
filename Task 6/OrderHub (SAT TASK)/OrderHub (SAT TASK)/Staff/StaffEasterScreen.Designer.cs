@@ -74,10 +74,9 @@
             // btnSignOut
             // 
             btnSignOut.Font = new Font("Segoe UI", 12F);
-            btnSignOut.Location = new Point(307, -1);
-            btnSignOut.Margin = new Padding(4, 5, 4, 5);
+            btnSignOut.Location = new Point(215, -1);
             btnSignOut.Name = "btnSignOut";
-            btnSignOut.Size = new Size(177, 92);
+            btnSignOut.Size = new Size(124, 55);
             btnSignOut.TabIndex = 47;
             btnSignOut.Text = "Sign Out";
             btnSignOut.UseVisualStyleBackColor = true;
@@ -85,10 +84,9 @@
             // btnMemberLogin
             // 
             btnMemberLogin.Font = new Font("Segoe UI", 12F);
-            btnMemberLogin.Location = new Point(134, -1);
-            btnMemberLogin.Margin = new Padding(4, 5, 4, 5);
+            btnMemberLogin.Location = new Point(94, -1);
             btnMemberLogin.Name = "btnMemberLogin";
-            btnMemberLogin.Size = new Size(177, 92);
+            btnMemberLogin.Size = new Size(124, 55);
             btnMemberLogin.TabIndex = 46;
             btnMemberLogin.Text = "Member Login";
             btnMemberLogin.UseVisualStyleBackColor = true;
@@ -96,34 +94,33 @@
             // btnChristmas
             // 
             btnChristmas.Font = new Font("Segoe UI", 12F);
-            btnChristmas.Location = new Point(-7, 674);
-            btnChristmas.Margin = new Padding(4, 5, 4, 5);
+            btnChristmas.Location = new Point(-5, 404);
             btnChristmas.Name = "btnChristmas";
-            btnChristmas.Size = new Size(147, 82);
+            btnChristmas.Size = new Size(103, 49);
             btnChristmas.TabIndex = 45;
             btnChristmas.Text = "Christmas";
             btnChristmas.UseVisualStyleBackColor = true;
+            btnChristmas.Click += btnChristmas_Click;
             // 
             // btnSummerTime
             // 
             btnSummerTime.Font = new Font("Segoe UI", 12F);
-            btnSummerTime.Location = new Point(-4, 604);
-            btnSummerTime.Margin = new Padding(4, 5, 4, 5);
+            btnSummerTime.Location = new Point(-3, 362);
             btnSummerTime.Name = "btnSummerTime";
-            btnSummerTime.Size = new Size(143, 77);
+            btnSummerTime.Size = new Size(100, 46);
             btnSummerTime.TabIndex = 44;
             btnSummerTime.Text = "Summer Time";
             btnSummerTime.UseVisualStyleBackColor = true;
+            btnSummerTime.Click += btnSummerTime_Click;
             // 
             // btnEaster
             // 
             btnEaster.BackColor = Color.SkyBlue;
             btnEaster.Font = new Font("Segoe UI", 12F);
             btnEaster.ForeColor = Color.White;
-            btnEaster.Location = new Point(-3, 532);
-            btnEaster.Margin = new Padding(4, 5, 4, 5);
+            btnEaster.Location = new Point(-2, 319);
             btnEaster.Name = "btnEaster";
-            btnEaster.Size = new Size(140, 77);
+            btnEaster.Size = new Size(98, 46);
             btnEaster.TabIndex = 43;
             btnEaster.Text = "Easter";
             btnEaster.UseVisualStyleBackColor = false;
@@ -131,10 +128,9 @@
             // Special
             // 
             Special.Font = new Font("Segoe UI", 12F);
-            Special.Location = new Point(-7, 461);
-            Special.Margin = new Padding(4, 5, 4, 5);
+            Special.Location = new Point(-5, 277);
             Special.Name = "Special";
-            Special.Size = new Size(144, 77);
+            Special.Size = new Size(101, 46);
             Special.TabIndex = 42;
             Special.Text = "Special";
             Special.UseVisualStyleBackColor = true;
@@ -143,10 +139,9 @@
             // btnHot
             // 
             btnHot.Font = new Font("Segoe UI", 12F);
-            btnHot.Location = new Point(-6, 391);
-            btnHot.Margin = new Padding(4, 5, 4, 5);
+            btnHot.Location = new Point(-4, 235);
             btnHot.Name = "btnHot";
-            btnHot.Size = new Size(143, 77);
+            btnHot.Size = new Size(100, 46);
             btnHot.TabIndex = 41;
             btnHot.Text = "Hot";
             btnHot.UseVisualStyleBackColor = true;
@@ -157,10 +152,9 @@
             btnCold.BackColor = Color.White;
             btnCold.Font = new Font("Segoe UI", 12F);
             btnCold.ForeColor = Color.Black;
-            btnCold.Location = new Point(-6, 321);
-            btnCold.Margin = new Padding(4, 5, 4, 5);
+            btnCold.Location = new Point(-4, 193);
             btnCold.Name = "btnCold";
-            btnCold.Size = new Size(144, 77);
+            btnCold.Size = new Size(101, 46);
             btnCold.TabIndex = 40;
             btnCold.Text = "Cold";
             btnCold.UseVisualStyleBackColor = false;
@@ -171,10 +165,9 @@
             btnSides.BackColor = Color.White;
             btnSides.Font = new Font("Segoe UI", 12F);
             btnSides.ForeColor = Color.Black;
-            btnSides.Location = new Point(-4, 249);
-            btnSides.Margin = new Padding(4, 5, 4, 5);
+            btnSides.Location = new Point(-3, 149);
             btnSides.Name = "btnSides";
-            btnSides.Size = new Size(143, 77);
+            btnSides.Size = new Size(100, 46);
             btnSides.TabIndex = 39;
             btnSides.Text = "Sides";
             btnSides.UseVisualStyleBackColor = false;
@@ -183,10 +176,9 @@
             // btnDessert
             // 
             btnDessert.Font = new Font("Segoe UI", 12F);
-            btnDessert.Location = new Point(-3, 181);
-            btnDessert.Margin = new Padding(4, 5, 4, 5);
+            btnDessert.Location = new Point(-2, 109);
             btnDessert.Name = "btnDessert";
-            btnDessert.Size = new Size(143, 73);
+            btnDessert.Size = new Size(100, 44);
             btnDessert.TabIndex = 38;
             btnDessert.Text = "Dessert";
             btnDessert.UseVisualStyleBackColor = true;
@@ -197,10 +189,9 @@
             btnMain.BackColor = Color.White;
             btnMain.Font = new Font("Segoe UI", 12F);
             btnMain.ForeColor = Color.Black;
-            btnMain.Location = new Point(-3, 112);
-            btnMain.Margin = new Padding(4, 5, 4, 5);
+            btnMain.Location = new Point(-2, 67);
             btnMain.Name = "btnMain";
-            btnMain.Size = new Size(141, 73);
+            btnMain.Size = new Size(99, 44);
             btnMain.TabIndex = 37;
             btnMain.Text = "Main";
             btnMain.UseVisualStyleBackColor = false;
@@ -209,18 +200,18 @@
             // btnBlank
             // 
             btnBlank.ForeColor = Color.FromArgb(190, 138, 98);
-            btnBlank.Location = new Point(-3, -1);
-            btnBlank.Margin = new Padding(4, 5, 4, 5);
+            btnBlank.Location = new Point(-2, -1);
             btnBlank.Name = "btnBlank";
-            btnBlank.Size = new Size(141, 123);
+            btnBlank.Size = new Size(99, 74);
             btnBlank.TabIndex = 36;
             btnBlank.UseVisualStyleBackColor = true;
             // 
             // btnChocolateFudgeEasterCakes
             // 
-            btnChocolateFudgeEasterCakes.Location = new Point(587, 123);
+            btnChocolateFudgeEasterCakes.Location = new Point(411, 74);
+            btnChocolateFudgeEasterCakes.Margin = new Padding(2, 2, 2, 2);
             btnChocolateFudgeEasterCakes.Name = "btnChocolateFudgeEasterCakes";
-            btnChocolateFudgeEasterCakes.Size = new Size(99, 92);
+            btnChocolateFudgeEasterCakes.Size = new Size(69, 55);
             btnChocolateFudgeEasterCakes.TabIndex = 128;
             btnChocolateFudgeEasterCakes.Text = "Chocolate Fudge Easter Cakes";
             btnChocolateFudgeEasterCakes.UseVisualStyleBackColor = true;
@@ -228,9 +219,10 @@
             // 
             // btnHotCrossBun
             // 
-            btnHotCrossBun.Location = new Point(454, 123);
+            btnHotCrossBun.Location = new Point(318, 74);
+            btnHotCrossBun.Margin = new Padding(2, 2, 2, 2);
             btnHotCrossBun.Name = "btnHotCrossBun";
-            btnHotCrossBun.Size = new Size(99, 92);
+            btnHotCrossBun.Size = new Size(69, 55);
             btnHotCrossBun.TabIndex = 125;
             btnHotCrossBun.Text = "Hot Cross Bun";
             btnHotCrossBun.UseVisualStyleBackColor = true;
@@ -238,9 +230,10 @@
             // 
             // btnEasterSugarCookies
             // 
-            btnEasterSugarCookies.Location = new Point(317, 123);
+            btnEasterSugarCookies.Location = new Point(222, 74);
+            btnEasterSugarCookies.Margin = new Padding(2, 2, 2, 2);
             btnEasterSugarCookies.Name = "btnEasterSugarCookies";
-            btnEasterSugarCookies.Size = new Size(99, 92);
+            btnEasterSugarCookies.Size = new Size(69, 55);
             btnEasterSugarCookies.TabIndex = 124;
             btnEasterSugarCookies.Text = "Easter Sugar Cookies";
             btnEasterSugarCookies.UseVisualStyleBackColor = true;
@@ -248,9 +241,10 @@
             // 
             // btnEasterSimnelCake
             // 
-            btnEasterSimnelCake.Location = new Point(177, 123);
+            btnEasterSimnelCake.Location = new Point(124, 74);
+            btnEasterSimnelCake.Margin = new Padding(2, 2, 2, 2);
             btnEasterSimnelCake.Name = "btnEasterSimnelCake";
-            btnEasterSimnelCake.Size = new Size(99, 92);
+            btnEasterSimnelCake.Size = new Size(69, 55);
             btnEasterSimnelCake.TabIndex = 122;
             btnEasterSimnelCake.Text = "Easter Simnel Cake";
             btnEasterSimnelCake.UseVisualStyleBackColor = true;
@@ -259,10 +253,9 @@
             // lsvOutput
             // 
             lsvOutput.Columns.AddRange(new ColumnHeader[] { clhOrderDetail, clhPrice, clhQuantity });
-            lsvOutput.Location = new Point(740, -3);
-            lsvOutput.Margin = new Padding(4, 5, 4, 5);
+            lsvOutput.Location = new Point(518, -2);
             lsvOutput.Name = "lsvOutput";
-            lsvOutput.Size = new Size(405, 214);
+            lsvOutput.Size = new Size(285, 130);
             lsvOutput.TabIndex = 179;
             lsvOutput.UseCompatibleStateImageBehavior = false;
             lsvOutput.View = View.Details;
@@ -287,20 +280,18 @@
             // 
             // txtChange
             // 
-            txtChange.Location = new Point(743, 212);
-            txtChange.Margin = new Padding(4, 5, 4, 5);
+            txtChange.Location = new Point(520, 127);
             txtChange.Name = "txtChange";
             txtChange.ReadOnly = true;
-            txtChange.Size = new Size(403, 31);
+            txtChange.Size = new Size(283, 23);
             txtChange.TabIndex = 158;
             txtChange.Text = "Change:";
             // 
             // btn5DollarNote
             // 
-            btn5DollarNote.Location = new Point(740, 242);
-            btn5DollarNote.Margin = new Padding(4, 5, 4, 5);
+            btn5DollarNote.Location = new Point(518, 145);
             btn5DollarNote.Name = "btn5DollarNote";
-            btn5DollarNote.Size = new Size(83, 132);
+            btn5DollarNote.Size = new Size(58, 79);
             btn5DollarNote.TabIndex = 159;
             btn5DollarNote.Text = "$5 Note";
             btn5DollarNote.UseVisualStyleBackColor = true;
@@ -308,10 +299,9 @@
             // 
             // btn9Numberpad
             // 
-            btn9Numberpad.Location = new Point(1040, 242);
-            btn9Numberpad.Margin = new Padding(4, 5, 4, 5);
+            btn9Numberpad.Location = new Point(728, 145);
             btn9Numberpad.Name = "btn9Numberpad";
-            btn9Numberpad.Size = new Size(107, 93);
+            btn9Numberpad.Size = new Size(75, 56);
             btn9Numberpad.TabIndex = 169;
             btn9Numberpad.Text = "9";
             btn9Numberpad.UseVisualStyleBackColor = true;
@@ -319,10 +309,9 @@
             // 
             // btn7Numberpad
             // 
-            btn7Numberpad.Location = new Point(820, 237);
-            btn7Numberpad.Margin = new Padding(4, 5, 4, 5);
+            btn7Numberpad.Location = new Point(574, 142);
             btn7Numberpad.Name = "btn7Numberpad";
-            btn7Numberpad.Size = new Size(119, 95);
+            btn7Numberpad.Size = new Size(83, 57);
             btn7Numberpad.TabIndex = 167;
             btn7Numberpad.Text = "7";
             btn7Numberpad.UseVisualStyleBackColor = true;
@@ -330,10 +319,9 @@
             // 
             // btn8Numberpad
             // 
-            btn8Numberpad.Location = new Point(933, 239);
-            btn8Numberpad.Margin = new Padding(4, 5, 4, 5);
+            btn8Numberpad.Location = new Point(653, 143);
             btn8Numberpad.Name = "btn8Numberpad";
-            btn8Numberpad.Size = new Size(113, 93);
+            btn8Numberpad.Size = new Size(79, 56);
             btn8Numberpad.TabIndex = 168;
             btn8Numberpad.Text = "8";
             btn8Numberpad.UseVisualStyleBackColor = true;
@@ -341,10 +329,9 @@
             // 
             // btn50DollarNote
             // 
-            btn50DollarNote.Location = new Point(740, 602);
-            btn50DollarNote.Margin = new Padding(4, 5, 4, 5);
+            btn50DollarNote.Location = new Point(518, 361);
             btn50DollarNote.Name = "btn50DollarNote";
-            btn50DollarNote.Size = new Size(83, 152);
+            btn50DollarNote.Size = new Size(58, 91);
             btn50DollarNote.TabIndex = 162;
             btn50DollarNote.Text = "$50 Note";
             btn50DollarNote.UseVisualStyleBackColor = true;
@@ -352,10 +339,9 @@
             // 
             // btn20DollarNote
             // 
-            btn20DollarNote.Location = new Point(740, 479);
-            btn20DollarNote.Margin = new Padding(4, 5, 4, 5);
+            btn20DollarNote.Location = new Point(518, 287);
             btn20DollarNote.Name = "btn20DollarNote";
-            btn20DollarNote.Size = new Size(83, 132);
+            btn20DollarNote.Size = new Size(58, 79);
             btn20DollarNote.TabIndex = 161;
             btn20DollarNote.Text = "$20 Note";
             btn20DollarNote.UseVisualStyleBackColor = true;
@@ -363,10 +349,9 @@
             // 
             // btn10DollarNote
             // 
-            btn10DollarNote.Location = new Point(740, 362);
-            btn10DollarNote.Margin = new Padding(4, 5, 4, 5);
+            btn10DollarNote.Location = new Point(518, 217);
             btn10DollarNote.Name = "btn10DollarNote";
-            btn10DollarNote.Size = new Size(83, 132);
+            btn10DollarNote.Size = new Size(58, 79);
             btn10DollarNote.TabIndex = 160;
             btn10DollarNote.Text = "$10 Note";
             btn10DollarNote.UseVisualStyleBackColor = true;
@@ -374,10 +359,9 @@
             // 
             // btn6Numberpad
             // 
-            btn6Numberpad.Location = new Point(1040, 327);
-            btn6Numberpad.Margin = new Padding(4, 5, 4, 5);
+            btn6Numberpad.Location = new Point(728, 196);
             btn6Numberpad.Name = "btn6Numberpad";
-            btn6Numberpad.Size = new Size(107, 93);
+            btn6Numberpad.Size = new Size(75, 56);
             btn6Numberpad.TabIndex = 166;
             btn6Numberpad.Text = "6";
             btn6Numberpad.UseVisualStyleBackColor = true;
@@ -385,10 +369,9 @@
             // 
             // btnDeleteNumerpad
             // 
-            btnDeleteNumerpad.Location = new Point(1040, 504);
-            btnDeleteNumerpad.Margin = new Padding(4, 5, 4, 5);
+            btnDeleteNumerpad.Location = new Point(728, 302);
             btnDeleteNumerpad.Name = "btnDeleteNumerpad";
-            btnDeleteNumerpad.Size = new Size(107, 95);
+            btnDeleteNumerpad.Size = new Size(75, 57);
             btnDeleteNumerpad.TabIndex = 175;
             btnDeleteNumerpad.Text = "Delete";
             btnDeleteNumerpad.UseVisualStyleBackColor = true;
@@ -396,10 +379,9 @@
             // 
             // btn3Numberpad
             // 
-            btn3Numberpad.Location = new Point(1040, 417);
-            btn3Numberpad.Margin = new Padding(4, 5, 4, 5);
+            btn3Numberpad.Location = new Point(728, 250);
             btn3Numberpad.Name = "btn3Numberpad";
-            btn3Numberpad.Size = new Size(107, 93);
+            btn3Numberpad.Size = new Size(75, 56);
             btn3Numberpad.TabIndex = 173;
             btn3Numberpad.Text = "3";
             btn3Numberpad.UseVisualStyleBackColor = true;
@@ -408,10 +390,9 @@
             // btnDecimalpointNumberpad
             // 
             btnDecimalpointNumberpad.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDecimalpointNumberpad.Location = new Point(820, 502);
-            btnDecimalpointNumberpad.Margin = new Padding(4, 5, 4, 5);
+            btnDecimalpointNumberpad.Location = new Point(574, 301);
             btnDecimalpointNumberpad.Name = "btnDecimalpointNumberpad";
-            btnDecimalpointNumberpad.Size = new Size(119, 95);
+            btnDecimalpointNumberpad.Size = new Size(83, 57);
             btnDecimalpointNumberpad.TabIndex = 171;
             btnDecimalpointNumberpad.Text = ".";
             btnDecimalpointNumberpad.UseVisualStyleBackColor = true;
@@ -419,10 +400,9 @@
             // 
             // btn1Numberpad
             // 
-            btn1Numberpad.Location = new Point(820, 417);
-            btn1Numberpad.Margin = new Padding(4, 5, 4, 5);
+            btn1Numberpad.Location = new Point(574, 250);
             btn1Numberpad.Name = "btn1Numberpad";
-            btn1Numberpad.Size = new Size(119, 95);
+            btn1Numberpad.Size = new Size(83, 57);
             btn1Numberpad.TabIndex = 170;
             btn1Numberpad.Text = "1";
             btn1Numberpad.UseVisualStyleBackColor = true;
@@ -431,10 +411,9 @@
             // btn0Numberpad
             // 
             btn0Numberpad.Font = new Font("Microsoft Sans Serif", 8.25F);
-            btn0Numberpad.Location = new Point(933, 502);
-            btn0Numberpad.Margin = new Padding(4, 5, 4, 5);
+            btn0Numberpad.Location = new Point(653, 301);
             btn0Numberpad.Name = "btn0Numberpad";
-            btn0Numberpad.Size = new Size(113, 97);
+            btn0Numberpad.Size = new Size(79, 58);
             btn0Numberpad.TabIndex = 174;
             btn0Numberpad.Text = "0";
             btn0Numberpad.UseVisualStyleBackColor = true;
@@ -442,10 +421,9 @@
             // 
             // btn2Numberpad
             // 
-            btn2Numberpad.Location = new Point(933, 417);
-            btn2Numberpad.Margin = new Padding(4, 5, 4, 5);
+            btn2Numberpad.Location = new Point(653, 250);
             btn2Numberpad.Name = "btn2Numberpad";
-            btn2Numberpad.Size = new Size(113, 93);
+            btn2Numberpad.Size = new Size(79, 56);
             btn2Numberpad.TabIndex = 172;
             btn2Numberpad.Text = "2";
             btn2Numberpad.UseVisualStyleBackColor = true;
@@ -453,10 +431,9 @@
             // 
             // btn4Numberpad
             // 
-            btn4Numberpad.Location = new Point(820, 327);
-            btn4Numberpad.Margin = new Padding(4, 5, 4, 5);
+            btn4Numberpad.Location = new Point(574, 196);
             btn4Numberpad.Name = "btn4Numberpad";
-            btn4Numberpad.Size = new Size(119, 95);
+            btn4Numberpad.Size = new Size(83, 57);
             btn4Numberpad.TabIndex = 164;
             btn4Numberpad.Text = "4";
             btn4Numberpad.UseVisualStyleBackColor = true;
@@ -464,10 +441,9 @@
             // 
             // btn5Numberpad
             // 
-            btn5Numberpad.Location = new Point(933, 327);
-            btn5Numberpad.Margin = new Padding(4, 5, 4, 5);
+            btn5Numberpad.Location = new Point(653, 196);
             btn5Numberpad.Name = "btn5Numberpad";
-            btn5Numberpad.Size = new Size(113, 93);
+            btn5Numberpad.Size = new Size(79, 56);
             btn5Numberpad.TabIndex = 165;
             btn5Numberpad.Text = "5";
             btn5Numberpad.UseVisualStyleBackColor = true;
@@ -475,10 +451,9 @@
             // 
             // btnSalePayment
             // 
-            btnSalePayment.Location = new Point(820, 692);
-            btnSalePayment.Margin = new Padding(4, 5, 4, 5);
+            btnSalePayment.Location = new Point(574, 415);
             btnSalePayment.Name = "btnSalePayment";
-            btnSalePayment.Size = new Size(326, 62);
+            btnSalePayment.Size = new Size(228, 37);
             btnSalePayment.TabIndex = 163;
             btnSalePayment.Text = "Sale";
             btnSalePayment.UseVisualStyleBackColor = true;
@@ -486,9 +461,10 @@
             // 
             // btnReciept
             // 
-            btnReciept.Location = new Point(1040, 597);
+            btnReciept.Location = new Point(728, 358);
+            btnReciept.Margin = new Padding(2, 2, 2, 2);
             btnReciept.Name = "btnReciept";
-            btnReciept.Size = new Size(107, 103);
+            btnReciept.Size = new Size(75, 62);
             btnReciept.TabIndex = 178;
             btnReciept.Text = "Recipt";
             btnReciept.UseVisualStyleBackColor = true;
@@ -496,9 +472,10 @@
             // 
             // btn00Numberpad
             // 
-            btn00Numberpad.Location = new Point(933, 592);
+            btn00Numberpad.Location = new Point(653, 355);
+            btn00Numberpad.Margin = new Padding(2, 2, 2, 2);
             btn00Numberpad.Name = "btn00Numberpad";
-            btn00Numberpad.Size = new Size(113, 103);
+            btn00Numberpad.Size = new Size(79, 62);
             btn00Numberpad.TabIndex = 177;
             btn00Numberpad.Text = "00";
             btn00Numberpad.UseVisualStyleBackColor = true;
@@ -506,9 +483,10 @@
             // 
             // btnCreditPayment
             // 
-            btnCreditPayment.Location = new Point(820, 592);
+            btnCreditPayment.Location = new Point(574, 355);
+            btnCreditPayment.Margin = new Padding(2, 2, 2, 2);
             btnCreditPayment.Name = "btnCreditPayment";
-            btnCreditPayment.Size = new Size(119, 107);
+            btnCreditPayment.Size = new Size(83, 64);
             btnCreditPayment.TabIndex = 176;
             btnCreditPayment.Text = "Credit";
             btnCreditPayment.UseVisualStyleBackColor = true;
@@ -516,10 +494,10 @@
             // 
             // StaffEasterScreen
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(190, 138, 98);
-            ClientSize = new Size(1143, 750);
+            ClientSize = new Size(800, 450);
             Controls.Add(lsvOutput);
             Controls.Add(txtChange);
             Controls.Add(btn5DollarNote);
@@ -559,6 +537,7 @@
             Controls.Add(btnMain);
             Controls.Add(btnBlank);
             ForeColor = Color.Black;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "StaffEasterScreen";
             Text = "StaffEasterScreen";
             ResumeLayout(false);

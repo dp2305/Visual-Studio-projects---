@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FoodItems>
+  <Item>
+    <CandiedYams>Candied Yams<Price>$6</Price><Quantity>2</Quantity></CandiedYams>
+  </Item>
+  <Item>
+    <PiginBlanket>pig in blankets<Price>$6</Price><Quantity>1</Quantity></PiginBlanket>
+  </Item>
+  <Item>
+    <GingerBread>Ginger Bread<Price>$4</Price><Quantity>1</Quantity></GingerBread>
+  </Item>
+  <Item>
+    <Eggnog>Eggnog<Price>$6</Price><Quantity>1</Quantity></Eggnog>
+  </Item>
+</FoodItems>

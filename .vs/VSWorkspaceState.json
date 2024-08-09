@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Task 6",
+    "\\Task 6\\OrderHub (SAT TASK)",
+    "\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)",
+    "\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Manager"
   ],
-  "SelectedNode": "\\OrderHub (SAT Task).sln",
+  "SelectedNode": "\\Task 6\\OrderHub (SAT TASK)\\OrderHub (SAT TASK)\\Manager\\ChangePriceMains(Manager).cs",
   "PreviewInSolutionExplorer": false
 }

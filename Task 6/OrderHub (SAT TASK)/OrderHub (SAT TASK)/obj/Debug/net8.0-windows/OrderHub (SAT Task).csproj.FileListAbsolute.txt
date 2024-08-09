@@ -71,3 +71,8 @@ C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\O
 C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub__SAT_Task_.Staff.StaffSidesScreen.resources
 C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub__SAT_Task_.Staff.StaffSpecialScreen.resources
 C:\Users\duttp\source\repos\Visual-Studio-projects-\Task 6\OrderHub (SAT TASK)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub__SAT_Task_.Staff.StaffEasterScreen.resources
+C:\Users\duttp\OneDrive\Documents\GitHub\Visual-Studio-projects---\Task 6\OrderHub (SAT TASK)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub__SAT_Task_.Staff.StaffChristmasScreen.resources
+C:\Users\duttp\OneDrive\Documents\GitHub\Visual-Studio-projects---\Task 6\OrderHub (SAT TASK)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub__SAT_Task_.Staff.StaffEasterScreen.resources
+C:\Users\duttp\OneDrive\Documents\GitHub\Visual-Studio-projects---\Task 6\OrderHub (SAT TASK)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub__SAT_Task_.Staff.StaffHotScreen.resources
+C:\Users\duttp\OneDrive\Documents\GitHub\Visual-Studio-projects---\Task 6\OrderHub (SAT TASK)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub__SAT_Task_.Staff.StaffSpecialScreen.resources
+C:\Users\duttp\OneDrive\Documents\GitHub\Visual-Studio-projects---\Task 6\OrderHub (SAT TASK)\OrderHub (SAT Task)\obj\Debug\net8.0-windows\OrderHub__SAT_Task_.Staff.StaffSummerTime.resources

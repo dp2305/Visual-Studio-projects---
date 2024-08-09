@@ -18,11 +18,11 @@ namespace OrderHub__SAT_Task_.Manager
         {
             InitializeComponent();
         }
-        public string numbervalue1 = "";
+        public string numbervalue = "";
         private void UpdateNumberValue(string value)
         {
-            numbervalue1 += value;
-            lsvOutput.Items[0].SubItems[1].Text = numbervalue1;
+            numbervalue += value;
+            lsvOutput.Items[0].SubItems[1].Text = numbervalue;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -63,6 +63,7 @@ namespace OrderHub__SAT_Task_.Manager
                         // Configure ListView if not already configured
                         if (lsvOutput.Columns.Count == 0)
                         {
+                            lsvOutput.Columns.Add("Item Name");
                             lsvOutput.Columns.Add("Price");
                             lsvOutput.View = View.Details; // Ensure the view is set to details
                         }
@@ -70,8 +71,9 @@ namespace OrderHub__SAT_Task_.Manager
                         // Clear previous items
                         lsvOutput.Items.Clear();
 
-                        // Create a new list view item with the price
+                        // Create a new list view item with the item name and price
                         ListViewItem listItem = new ListViewItem(price);
+                        listItem.SubItems.Add(price); // Add price as the second column
                         lsvOutput.Items.Add(listItem);
                     }
                     else
@@ -85,11 +87,13 @@ namespace OrderHub__SAT_Task_.Manager
                     MessageBox.Show("The XML file path is incorrect or the file does not exist.");
                 }
             }
+
         }
+
 
         private void btn7Numberpad_Click(object sender, EventArgs e)
         {
-            lsvOutput.Items[0].SubItems[1].Text = "7";
+            UpdateNumberValue("$7");
         }
 
         private void btnBrownie_Click(object sender, EventArgs e)

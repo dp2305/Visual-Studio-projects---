@@ -188,147 +188,328 @@ namespace OrderHub__SAT_Task_.Staff
         }
         private void btnRaspberrySlush_Click(object sender, EventArgs e)
         {
-
+            XmlHelper.DisplayItemDetails("SummerTimeFoodItem.xml", "btnRaspberrySlush_Click", lsvOutput);
         }
 
         private void btnCookiesanCreamMilkShake_Click(object sender, EventArgs e)
         {
-
+            XmlHelper.DisplayItemDetails("SummerTimeFoodItem.xml", "CookiesanCreamMilkShake", lsvOutput);
         }
 
         private void btnZooperdooper_Click(object sender, EventArgs e)
         {
-
+            XmlHelper.DisplayItemDetails("SummerTimeFoodItem.xml", "Zooperdooper", lsvOutput);
         }
 
         private void btn5DollarNote_Click(object sender, EventArgs e)
         {
+            // Calculate the total cost
+            double totalCost = CalculateTotalCost();
+            double amountPaid = 5;
+            double change = amountPaid - totalCost;
 
+            if (amountPaid < totalCost)
+            {
+                MessageBox.Show("not enough");
+                return;
+            }
+
+            else
+            {
+                txtChange.Text = $"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}";
+            }
+
+            // Save orders from ListView to XML file
+            SaveOrdersToXml();
+            lsvOutput.Items.Clear();
         }
 
         private void btn10DollarNote_Click(object sender, EventArgs e)
         {
+            // Calculate the total cost
+            double totalCost = CalculateTotalCost();
+            double amountPaid = 10;
+            double change = amountPaid - totalCost;
 
+            if (amountPaid < totalCost)
+            {
+                MessageBox.Show("not enough");
+                return;
+            }
+
+            else
+            {
+                txtChange.Text = $"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}";
+            }
+
+            // Save orders from ListView to XML file
+            SaveOrdersToXml();
+            lsvOutput.Items.Clear();
         }
 
         private void btn20DollarNote_Click(object sender, EventArgs e)
         {
+            // Calculate the total cost
+            double totalCost = CalculateTotalCost();
+            double amountPaid = 20;
+            double change = amountPaid - totalCost;
 
+            if (amountPaid < totalCost)
+            {
+                MessageBox.Show("not enough");
+                return;
+            }
+
+            else
+            {
+                txtChange.Text = $"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}";
+            }
+
+            // Save orders from ListView to XML file
+            SaveOrdersToXml();
+            lsvOutput.Items.Clear();
         }
 
         private void btn50DollarNote_Click(object sender, EventArgs e)
         {
+            // Calculate the total cost
+            double totalCost = CalculateTotalCost();
+            double amountPaid = 50;
+            double change = amountPaid - totalCost;
 
+            if (amountPaid < totalCost)
+            {
+                MessageBox.Show("not enough");
+                return;
+            }
+
+            else
+            {
+                txtChange.Text = $"Payment: ${amountPaid}\nTotal Cost: ${totalCost}\nChange: ${change}";
+            }
+
+            // Save orders from ListView to XML file
+            SaveOrdersToXml();
+            lsvOutput.Items.Clear();
+        }
+
+        private void UpdateNumberValue(string value)
+        {
+            numbervalue += value;
+            lsvOutput.Items[0].SubItems[2].Text = numbervalue;
         }
 
         private void btn1Numberpad_Click(object sender, EventArgs e)
         {
-
+            UpdateNumberValue("1");
         }
 
         private void btn2Numberpad_Click(object sender, EventArgs e)
         {
-
+            UpdateNumberValue("2");
         }
 
         private void btn3Numberpad_Click(object sender, EventArgs e)
         {
-
+            UpdateNumberValue("3");
         }
 
         private void btn4Numberpad_Click(object sender, EventArgs e)
         {
-
+            UpdateNumberValue("4");
         }
 
         private void btn5Numberpad_Click(object sender, EventArgs e)
         {
-
+            UpdateNumberValue("5");
         }
 
         private void btn6Numberpad_Click(object sender, EventArgs e)
         {
-
+            UpdateNumberValue("6");
         }
 
         private void btn7Numberpad_Click(object sender, EventArgs e)
         {
-
+            UpdateNumberValue("7");
         }
 
         private void btn8Numberpad_Click(object sender, EventArgs e)
         {
-
+            UpdateNumberValue("8");
         }
 
         private void btn9Numberpad_Click(object sender, EventArgs e)
         {
-
+            UpdateNumberValue("9");
         }
 
         private void btn0Numberpad_Click(object sender, EventArgs e)
         {
-
+            UpdateNumberValue("0");
         }
 
         private void btn00Numberpad_Click(object sender, EventArgs e)
         {
-
+            UpdateNumberValue("00");
         }
 
         private void btnDecimalpointNumberpad_Click(object sender, EventArgs e)
         {
-
+            // Add a decimal point only if there isn't one already
+            if (!numbervalue.Contains("."))
+            {
+                UpdateNumberValue(".");
+            }
         }
 
         private void btnDeleteNumerpad_Click(object sender, EventArgs e)
         {
-
+            // Remove the last character from the numbervalue string
+            if (numbervalue.Length > 0)
+            {
+                numbervalue = numbervalue.Substring(0, numbervalue.Length - 1);
+                lsvOutput.Items[0].SubItems[2].Text = numbervalue;
+            }
         }
 
         private void btnCreditPayment_Click(object sender, EventArgs e)
         {
-
+            // Save orders from ListView to XML file
+            SaveOrdersToXml();
+            lsvOutput.Items.Clear();
         }
 
         private void btnSalePayment_Click(object sender, EventArgs e)
         {
+            // Save orders from ListView to XML file
+            SaveOrdersToXml();
+            lsvOutput.Items.Clear();
+        }
 
+        private void btnReciept_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Printing Recipt");
         }
 
         private void btnMain_Click(object sender, EventArgs e)
         {
+            // Hide the current form.
+            this.Hide();
 
+            // Create a new instance of StaffDessertScreen form.
+            StaffMainScreen StaffMainScreen = new StaffMainScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffMainScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffMainScreen.Show();
         }
 
         private void btnDessert_Click(object sender, EventArgs e)
         {
+            // Hide the current form.
+            this.Hide();
 
+            // Create a new instance of StaffDessertScreen form.
+            StaffDessertScreen StaffDessertScreen = new StaffDessertScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffDessertScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffDessertScreen.Show();
         }
 
         private void btnSides_Click(object sender, EventArgs e)
         {
+            // Hide the current form.
+            this.Hide();
 
+            // Create a new instance of StaffDessertScreen form.
+            StaffSidesScreen StaffSidesScreen = new StaffSidesScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffSidesScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffSidesScreen.Show();
         }
 
         private void btnCold_Click(object sender, EventArgs e)
         {
+            // Hide the current form.
+            this.Hide();
 
+            // Create a new instance of StaffDessertScreen form.
+            StaffColdScreen StaffColdScreen = new StaffColdScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffColdScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffColdScreen.Show();
         }
 
         private void btnHot_Click(object sender, EventArgs e)
         {
+            // Hide the current form.
+            this.Hide();
 
+            // Create a new instance of StaffDessertScreen form.
+            StaffHotScreen StaffHotScreen = new StaffHotScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffHotScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffHotScreen.Show();
         }
 
         private void Special_Click(object sender, EventArgs e)
         {
+            // Hide the current form.
+            this.Hide();
 
+            // Create a new instance of StaffDessertScreen form.
+            StaffSpecialScreen StaffSpecialScreen = new StaffSpecialScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffSpecialScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffSpecialScreen.Show();
         }
 
         private void btnEaster_Click(object sender, EventArgs e)
         {
+            // Hide the current form.
+            this.Hide();
 
+            // Create a new instance of StaffDessertScreen form.
+            StaffEasterScreen StaffEasterScreen = new StaffEasterScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffEasterScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffEasterScreen.Show();
+        }
+
+        private void btnChristmas_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            StaffChristmasScreen StaffChristmasScreen = new StaffChristmasScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffChristmasScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffChristmasScreen.Show();
         }
     }
 }

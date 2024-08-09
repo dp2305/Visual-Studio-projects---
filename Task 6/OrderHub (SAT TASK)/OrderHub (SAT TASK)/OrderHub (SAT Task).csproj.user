@@ -13,6 +13,9 @@
     <Compile Update="Manager\ChangePriceMains(Manager).cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Staff\StaffChristmasScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Staff\StaffColdScreen.cs">
       <SubType>Form</SubType>
     </Compile>

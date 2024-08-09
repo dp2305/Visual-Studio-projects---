@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Orders>
+  <FullOrder>
+    <ID>7</ID>
+    <Order>
+      <Details>Eight Cheese Burger</Details>
+      <Price>$20</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
+  <FullOrder>
+    <ID>13</ID>
+    <Order>
+      <Details>8</Details>
+      <Price>CheeseBurger</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
+</Orders>

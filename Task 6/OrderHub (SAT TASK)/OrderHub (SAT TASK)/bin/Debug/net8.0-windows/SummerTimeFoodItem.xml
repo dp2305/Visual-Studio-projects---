@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FoodItems>
+  <Item>
+    <RaspberrySlush> Raspberry Slush<Price>$6</Price><Quantity>1</Quantity></RaspberrySlush>
+  </Item>
+  <Item>
+    <CookiesanCreamMilkShake>Cookies an Cream MilkShake<Price>$8</Price><Quantity>1</Quantity></CookiesanCreamMilkShake>
+  </Item>
+  <Item>
+    <Zooperdooper>Zooperdooper<Price>$1</Price><Quantity>1</Quantity></Zooperdooper>
+  </Item>
+</FoodItems>

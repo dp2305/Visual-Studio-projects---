@@ -12,8 +12,95 @@ namespace OrderHub__SAT_Task_.Staff
         {
             InitializeComponent();
         }
+        public const string ORDERS = "PastOrders.xml";
+        private string ID = "ID.txt";
 
+        private void SaveOrdersToXml()
+        {
+            // Ensure the ListView has items
+            if (lsvOutput.Items.Count == 0)
+            {
+                MessageBox.Show("No orders to save.");
+                return;
+            }
 
+            // Validate file path (optional)
+            if (string.IsNullOrWhiteSpace(ORDERS))
+            {
+                MessageBox.Show("Invalid file path.");
+                return;
+            }
+
+            XElement ordersXml;
+
+            // Check if the XML file already exists
+            if (File.Exists(ORDERS))
+            {
+                // Load existing XML file
+                ordersXml = XElement.Load(ORDERS);
+            }
+            else
+            {
+                // Create a new root element if the file does not exist
+                ordersXml = new XElement("Orders");
+            }
+
+            // Generate a new ID
+            int newId = IDgeneration();
+
+            // Create a new FullOrder element with the generated ID
+            XElement fullOrderElement = new XElement("FullOrder",
+                new XElement("ID", newId.ToString()) // Use the generated ID for the full order
+            );
+
+            // Iterate through each item in the ListView and add to the FullOrder element
+            foreach (ListViewItem item in lsvOutput.Items)
+            {
+                XElement orderElement = new XElement("Order",
+                    new XElement("Details", item.Text),
+                    new XElement("Price", item.SubItems[1].Text),
+                    new XElement("Quantity", item.SubItems[2].Text)
+                );
+                fullOrderElement.Add(orderElement);
+            }
+
+            // Add the FullOrder element to the root
+            ordersXml.Add(fullOrderElement);
+
+            // Save the updated XML structure to the specified file
+            ordersXml.Save(ORDERS);
+
+            MessageBox.Show("Orders saved to XML file.");
+        }
+
+        private int IDgeneration()
+        {
+            // Generate the ID
+            int newId = 1;
+            if (File.Exists(ID))
+            {
+                string[] lines = File.ReadAllLines(ID);
+
+                // If there are existing records, calculate the new ID based on the last record
+                if (lines.Length > 0)
+                {
+                    string[] item = lines[lines.Length - 1].Split(",");
+                    newId = int.Parse(item[0]) + 1;
+                }
+            }
+
+            // Construct the record
+            string id = newId.ToString();
+            string record = $"{id}";
+
+            // Write the record to the log file
+            using (TextWriter tw = new StreamWriter(ID, true))
+            {
+                tw.WriteLine(record);
+            }
+
+            return newId;
+        }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -155,26 +242,7 @@ namespace OrderHub__SAT_Task_.Staff
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (lsvOrderList.SelectedItems.Count > 0)
-            {
-                //Selects value to be deleted 
-                string del = lsvOrderList.SelectedItems[0].Text;
-                if (del == "")
-                {
-                    MessageBox.Show("Please select a Order first");
-                }
-                var xml = File.ReadAllText("orders.xml");
-                XDocument doc = XDocument.Parse(xml);
-
-                //Remove xml element that matches the selected firstName field
-                doc.Descendants().Elements("FullOrder").Where(x => x.Element("ID")?.Value == del).Remove();
-
-                var result = doc.ToString();
-                MessageBox.Show("Order Confirmed");
-                doc.Save("orders.xml");
-
-                LoadOrderList();
-            }
+            SaveOrdersToXml();
 
         }
 

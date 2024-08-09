@@ -625,5 +625,50 @@ namespace OrderHub__SAT_Task_
             // Display MemberLogin.
             StaffSpecialScreen.Show();
         }
+
+        private void btnEaster_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            StaffEasterScreen StaffEasterScreen = new StaffEasterScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffEasterScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffEasterScreen.Show();
+        }
+
+        private void btnSummerTime_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            StaffSummerTime StaffSummerTime = new StaffSummerTime();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffSummerTime.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffSummerTime.Show();
+        }
+
+        private void btnChristmas_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            StaffChristmasScreen StaffChristmasScreen = new StaffChristmasScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffChristmasScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffChristmasScreen.Show();
+        }
     }
 }

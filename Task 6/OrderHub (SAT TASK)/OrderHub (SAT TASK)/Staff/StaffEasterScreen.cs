@@ -189,22 +189,22 @@ namespace OrderHub__SAT_Task_.Staff
 
         private void btnEasterSimnelCake_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails("EasterFoodItems.xml", "EasterSimnelCake", lsvOutput);
+            XmlHelper.DisplayItemDetails("EasterFoodItem.xml", "EasterSimnelCake", lsvOutput);
         }
 
         private void btnEasterSugarCookies_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails("EasterFoodItems.xml", "EasterSugarCookies", lsvOutput);
+            XmlHelper.DisplayItemDetails("EasterFoodItem.xml", "EasterSugarCookies", lsvOutput);
         }
 
         private void btnHotCrossBun_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails("EasterFoodItems.xml", "HotCrossBun", lsvOutput);
+            XmlHelper.DisplayItemDetails("EasterFoodItem.xml", "HotCrossBun", lsvOutput);
         }
 
         private void btnChocolateFudgeEasterCakes_Click(object sender, EventArgs e)
         {
-            XmlHelper.DisplayItemDetails("EasterFoodItems.xml", "ChocolateFudgeEasterCakes", lsvOutput);
+            XmlHelper.DisplayItemDetails("EasterFoodItem.xml", "ChocolateFudgeEasterCakes", lsvOutput);
         }
 
         private void btn5DollarNote_Click(object sender, EventArgs e)
@@ -484,6 +484,37 @@ namespace OrderHub__SAT_Task_.Staff
 
             // Display MemberLogin.
             StaffSpecialScreen.Show();
+        }
+
+
+        private void btnSummerTime_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            StaffSummerTime StaffSummerTime = new StaffSummerTime();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffSummerTime.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffSummerTime.Show();
+        }
+
+        private void btnChristmas_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            StaffChristmasScreen StaffChristmasScreen = new StaffChristmasScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffChristmasScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffChristmasScreen.Show();
         }
     }
 }

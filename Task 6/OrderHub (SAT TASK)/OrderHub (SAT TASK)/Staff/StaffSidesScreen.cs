@@ -460,5 +460,110 @@ namespace OrderHub__SAT_Task_.Staff
             // Display MemberLogin.
             StaffColdScreen.Show();
         }
+
+        private void btnHot_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            StaffHotScreen StaffHotScreen = new StaffHotScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffHotScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffHotScreen.Show();
+        }
+
+        private void btnSpecial_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            StaffSpecialScreen StaffSpecialScreen = new StaffSpecialScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffSpecialScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffSpecialScreen.Show();
+        }
+
+        private void btnEaster_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            StaffEasterScreen StaffEasterScreen = new StaffEasterScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffEasterScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffEasterScreen.Show();
+        }
+
+        private void btnSummerTime_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            StaffSummerTime StaffSummerTime = new StaffSummerTime();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffSummerTime.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffSummerTime.Show();
+        }
+
+        private void btnChristmas_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            StaffChristmasScreen StaffChristmasScreen = new StaffChristmasScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffChristmasScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffChristmasScreen.Show();
+        }
+
+        private void btnMemberLogin_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            MemberLogin MemberLogin = new MemberLogin();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            MemberLogin.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            MemberLogin.Show();
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            LoginMain LoginMain = new LoginMain();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            LoginMain.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            LoginMain.Show();
+        }
     }
 }
