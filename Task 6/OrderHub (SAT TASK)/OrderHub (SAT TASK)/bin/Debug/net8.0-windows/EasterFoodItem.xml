@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FoodItems>
+  <Item>
+    <EasterSimnelCake>Easter Simnel Cake <Price>$10</Price><Quantity>1</Quantity></EasterSimnelCake>
+  </Item>
+  <Item>
+    <EasterSugarCookies>Easter Sugar Cookies<Price>$3</Price><Quantity>1</Quantity></EasterSugarCookies>
+  </Item>
+  <Item>
+    <HotCrossBun>Hot Cross Bun <Price>1</Price><Quantity>1</Quantity></HotCrossBun>
+  </Item>
+  <Item>
+    <ChocolateFudgeEasterCakes>Chocolate Fudge Easter Cakes<Price>$7</Price><Quantity>1</Quantity></ChocolateFudgeEasterCakes>
+  </Item>
+</FoodItems>

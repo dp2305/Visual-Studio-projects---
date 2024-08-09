@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FoodItems>
+  <Item>
+    <CocaColaSpider>CocaCola Spider<Price>$9</Price><Quantity>1</Quantity></CocaColaSpider>
+  </Item>
+  <Item>
+    <FantaSpider>Fanta Spider <Price>$9</Price><Quantity>1</Quantity></FantaSpider>
+  </Item>
+</FoodItems>

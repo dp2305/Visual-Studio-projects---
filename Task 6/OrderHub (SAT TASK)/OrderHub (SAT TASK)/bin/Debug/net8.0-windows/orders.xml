@@ -32,4 +32,17 @@
       <Quantity>7</Quantity>
     </Order>
   </FullOrder>
+  <FullOrder>
+    <ID>11</ID>
+    <Order>
+      <Details>FlatWhite</Details>
+      <Price>$5</Price>
+      <Quantity>1</Quantity>
+    </Order>
+    <Order>
+      <Details>HotChoco</Details>
+      <Price>$6</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
 </Orders>

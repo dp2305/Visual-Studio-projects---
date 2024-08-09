@@ -598,5 +598,32 @@ namespace OrderHub__SAT_Task_
             // Display MemberLogin.
             StaffColdScreen.Show();
         }
+
+        private void btnHot_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+
+            StaffHotScreen StaffHotScreen = new StaffHotScreen();
+
+            StaffHotScreen.Closed += (s, args) => this.Close();
+
+            StaffHotScreen.Show();
+        }
+
+        private void btnSpecial_Click(object sender, EventArgs e)
+        {
+            // Hide the current form.
+            this.Hide();
+
+            // Create a new instance of StaffDessertScreen form.
+            StaffSpecialScreen StaffSpecialScreen = new StaffSpecialScreen();
+
+            // Subscribe to the Closed event of form2 to close the current form when form2 is closed.
+            StaffSpecialScreen.Closed += (s, args) => this.Close();
+
+            // Display MemberLogin.
+            StaffSpecialScreen.Show();
+        }
     }
 }
