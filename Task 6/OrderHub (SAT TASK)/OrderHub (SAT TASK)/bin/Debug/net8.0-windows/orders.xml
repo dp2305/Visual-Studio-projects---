@@ -58,4 +58,10 @@
       <Quantity>1</Quantity>
     </Order>
   </FullOrder>
+  <FullOrder>
+    <ID>15</ID>
+    <Order>
+      <Price>$7</Price>
+    </Order>
+  </FullOrder>
 </Orders>
