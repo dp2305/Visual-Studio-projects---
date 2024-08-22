@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Orders>
   <FullOrder>
-    <ID>7</ID>
-    <Order>
-      <Details>Eight Cheese Burger</Details>
-      <Price>$20</Price>
-      <Quantity>1</Quantity>
-    </Order>
-  </FullOrder>
-  <FullOrder>
     <ID>8</ID>
     <Order>
       <Details>CheeseBurger</Details>
@@ -62,6 +54,92 @@
     <ID>15</ID>
     <Order>
       <Price>$7</Price>
+    </Order>
+  </FullOrder>
+  <FullOrder>
+    <ID>17</ID>
+    <Order>
+      <Details>CookiesanCreamMilkShake</Details>
+      <Price>$8</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
+  <FullOrder>
+    <ID>18</ID>
+    <Order>
+      <Details>CookiesanCreamMilkShake</Details>
+      <Price>$8</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
+  <FullOrder>
+    <ID>19</ID>
+    <Order>
+      <Details>BlackBeanBurger</Details>
+      <Price>$9</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
+  <FullOrder>
+    <ID>21</ID>
+    <Order>
+      <Details>MushroomBurger</Details>
+      <Price>$9</Price>
+      <Quantity>1</Quantity>
+    </Order>
+    <Order>
+      <Details>MushroomBurger</Details>
+      <Price>$9</Price>
+      <Quantity>1</Quantity>
+    </Order>
+    <Order>
+      <Details>MushroomBurger</Details>
+      <Price>$9</Price>
+      <Quantity>1</Quantity>
+    </Order>
+    <Order>
+      <Details>HamBurger</Details>
+      <Price>$7</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
+  <FullOrder>
+    <ID>22</ID>
+    <Order>
+      <Details>ChiliBurger</Details>
+      <Price>$5</Price>
+      <Quantity>1</Quantity>
+    </Order>
+    <Order>
+      <Details>ChiliBurger</Details>
+      <Price>$5</Price>
+      <Quantity>1</Quantity>
+    </Order>
+    <Order>
+      <Details>ChiliBurger</Details>
+      <Price>$5</Price>
+      <Quantity>1</Quantity>
+    </Order>
+    <Order>
+      <Details>ChiliBurger</Details>
+      <Price>$5</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
+  <FullOrder>
+    <ID>23</ID>
+    <Order>
+      <Details>CheeseBurger</Details>
+      <Price>$5</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
+  <FullOrder>
+    <ID>25</ID>
+    <Order>
+      <Details>ChiliBurger</Details>
+      <Price>$5</Price>
+      <Quantity>1</Quantity>
     </Order>
   </FullOrder>
 </Orders>
