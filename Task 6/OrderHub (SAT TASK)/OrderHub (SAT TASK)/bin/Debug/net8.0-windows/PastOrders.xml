@@ -16,4 +16,28 @@
       <Quantity>1</Quantity>
     </Order>
   </FullOrder>
+  <FullOrder>
+    <ID>20</ID>
+    <Order>
+      <Details>7</Details>
+      <Price>Eight Cheese Burger</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
+  <FullOrder>
+    <ID>24</ID>
+    <Order>
+      <Details>7</Details>
+      <Price>Eight Cheese Burger</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
+  <FullOrder>
+    <ID>26</ID>
+    <Order>
+      <Details>10</Details>
+      <Price>CheeseBurger</Price>
+      <Quantity>7</Quantity>
+    </Order>
+  </FullOrder>
 </Orders>

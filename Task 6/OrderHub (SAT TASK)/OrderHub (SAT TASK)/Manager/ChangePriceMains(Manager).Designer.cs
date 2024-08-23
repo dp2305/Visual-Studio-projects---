@@ -39,8 +39,8 @@
             btnChangePricing = new Button();
             btnBlank = new Button();
             lsvOutput = new ListView();
+            columnHeader3 = new ColumnHeader();
             columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
             btn9Numberpad = new Button();
             btn7Numberpad = new Button();
             btn8Numberpad = new Button();
@@ -169,7 +169,7 @@
             // 
             // lsvOutput
             // 
-            lsvOutput.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2 });
+            lsvOutput.Columns.AddRange(new ColumnHeader[] { columnHeader3, columnHeader1 });
             lsvOutput.Location = new Point(814, -3);
             lsvOutput.Margin = new Padding(4, 5, 4, 5);
             lsvOutput.Name = "lsvOutput";
@@ -178,15 +178,15 @@
             lsvOutput.UseCompatibleStateImageBehavior = false;
             lsvOutput.View = View.Details;
             // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Item";
+            columnHeader3.Width = 180;
+            // 
             // columnHeader1
             // 
-            columnHeader1.Text = "Original Price";
+            columnHeader1.Text = "Price";
             columnHeader1.Width = 120;
-            // 
-            // columnHeader2
-            // 
-            columnHeader2.Text = "Modified Price";
-            columnHeader2.Width = 100;
             // 
             // btn9Numberpad
             // 
@@ -395,6 +395,7 @@
             btnSave.TabIndex = 43;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // ChangePriceMains
             // 
@@ -474,7 +475,7 @@
         private Button btnChocoLavaCake;
         private Button btnBrownie;
         private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
         private Button btnSave;
+        private ColumnHeader columnHeader3;
     }
 }
