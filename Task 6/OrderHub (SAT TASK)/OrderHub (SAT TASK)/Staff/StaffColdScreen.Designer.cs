@@ -109,9 +109,9 @@
             // btnSummerTime
             // 
             btnSummerTime.Font = new Font("Segoe UI", 12F);
-            btnSummerTime.Location = new Point(-1, 363);
+            btnSummerTime.Location = new Point(-1, 360);
             btnSummerTime.Name = "btnSummerTime";
-            btnSummerTime.Size = new Size(100, 46);
+            btnSummerTime.Size = new Size(100, 59);
             btnSummerTime.TabIndex = 32;
             btnSummerTime.Text = "Summer Time";
             btnSummerTime.UseVisualStyleBackColor = true;

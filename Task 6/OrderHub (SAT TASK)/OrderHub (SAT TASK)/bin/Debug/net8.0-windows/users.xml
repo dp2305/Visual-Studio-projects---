@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <profile>
   <users>
-    <username>1</username>
-    <pwd>1</pwd>
+    <username>staff</username>
+    <pwd>STAFF</pwd>
 	</users>
 	<users>
-	<Chefuser>2</Chefuser>
-	<ChefPwd>2</ChefPwd>
+	<Chefuser>chef</Chefuser>
+	<ChefPwd>CHEF</ChefPwd>
 	</users>
 	<users>
-	<adminuser>3</adminuser>
-	<adminpwd>3</adminpwd>
+	<adminuser>manager</adminuser>
+	<adminpwd>MANAGER</adminpwd>
   </users>
 </profile>  

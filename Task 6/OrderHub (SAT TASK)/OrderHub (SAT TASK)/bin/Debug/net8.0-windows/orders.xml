@@ -58,4 +58,12 @@
       <Quantity>1</Quantity>
     </Order>
   </FullOrder>
+  <FullOrder>
+    <ID>14</ID>
+    <Order>
+      <Details>TripleCheeseBurger</Details>
+      <Price>$9</Price>
+      <Quantity>1</Quantity>
+    </Order>
+  </FullOrder>
 </Orders>
